@@ -897,8 +897,13 @@ aside.create-comment h2 i {
 aside.comments .comment {
   margin: 130px 0 0 0;
 }
-aside.comments .comment.reply {
-  margin-left: 100px;
+@media (min-width: 767px) {
+  aside.comments .comment.reply {
+    margin-left: 100px;
+  }
+}
+.reply .meta{
+  color:#55a773;
 }
 aside.comments .comment header img {
   float: left;

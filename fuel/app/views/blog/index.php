@@ -57,7 +57,7 @@
 					<?php if($i % 2 == 0):?>
 						<?php echo nl2br($temp[$i]);?>
 					<?php else:?>
-
+						<pre class="brush: html;"><?php echo $temp[$i];?></pre>
 					<?php endif;?>
 				<?php endfor;?>
 			<?php endif;?>
@@ -91,7 +91,7 @@
 				<?php echo Asset::img('admin.jpeg',array('class'=>'avatar'));?>
 			<?php endif;?>
 			<div class='meta'>
-				<h3><a href='#'><?php $val["name"];?></a></h3>
+				<h3><?php echo $val["name"];?></h3>
 				<span class='date'>
 					<?php echo date("d F Y",$val["created_at"])?>
 				</span>
