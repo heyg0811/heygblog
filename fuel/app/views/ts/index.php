@@ -33,7 +33,7 @@
                     <input type="email" name="email" id="contact-email" placeholder="めーる" class="form-control input-lg">
                     <textarea rows="10" name="body" id="contact-body" placeholder="申請の場合はチャンネル名・パスワード・ユーザー名・使用目的を御記入ください。" class="form-control input-lg"></textarea>
                     <div class="buttons clearfix">
-                        <button type="submit" class="btn btn-xlarge btn-heyg-one">Submit</button>
+                        <button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
                     </div>
                 </form>
             </div>

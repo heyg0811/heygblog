@@ -49,7 +49,7 @@
                     <input type="email" name="email" id="contact-email" placeholder="めーる" class="form-control input-lg">
                     <textarea rows="10" name="body" id="contact-body" placeholder="なにか書いてね" class="form-control input-lg"></textarea>
                     <div class="buttons clearfix">
-                        <button type="submit" class="btn btn-xlarge btn-heyg-one">Submit</button>
+                        <button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
                     </div>
                 </form>
             </div>
