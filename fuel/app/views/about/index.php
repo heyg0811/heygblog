@@ -1,7 +1,8 @@
 <div class="widewrapper main">
     <div class="container about">
         <h2>
-            ようこそ。<span class="about-bold" style="color:#69bc87;">HeyG</span>ブログへ！
+            ようこそ<br />
+            <span class="about-bold" style="color:#69bc87;">HeyG</span>ブログへ！
         </h2>
         <span class="about-small">
             <p>　<span style="color:#69bc87;">HeyG</span>はハンドルネームとして使っております。</p>
