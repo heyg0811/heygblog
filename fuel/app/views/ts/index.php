@@ -5,7 +5,7 @@
             [<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]です
         </h1>
         <span class="about-medium">
-            <p>　チャンネル作成依頼は下記のフォームより</p>
+            <p>チャンネル作成依頼は下記のより</p>
         </span>
         <hr>
         <span class="about-small">
