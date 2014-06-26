@@ -6,9 +6,21 @@
 return array(
 	'default' => array(
 		'connection'  => array(
+			'dsn'        => 'mysql:host=localhost;dbname=heygblog_db',
+			'username'   => 'root',
+			'password'   => 'root',
+		),
+	),
+);
+
+/*
+return array(
+	'default' => array(
+		'connection'  => array(
 			'dsn'        => 'mysql:host=mysql486.db.sakura.ne.jp;dbname=heyg_db',
 			'username'   => 'heyg',
 			'password'   => 's811n311',
 		),
 	),
 );
+*/

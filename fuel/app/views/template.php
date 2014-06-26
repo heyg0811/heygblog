@@ -21,7 +21,6 @@
     <?php echo Asset::css('vendor/font-awesome/font-awesome.css');?>
 
     <!-- Google Webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
     <?php echo Asset::css('heygblog.css');?>

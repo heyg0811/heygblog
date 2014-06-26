@@ -11,7 +11,7 @@
                         <hr>
                     </header>
                     <div class="body">
-                        <?php echo mb_substr($val['body'],0,80,"utf-8");?>
+                        <?php echo $val["digest"];?>
                     </div>
                     <div class="clearfix">
                         <a href=<?php echo "blog?id=".$val['article_id'];?> class="btn btn-heyg-one">Read more</a>
