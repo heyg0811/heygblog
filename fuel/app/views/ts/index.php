@@ -1,7 +1,8 @@
 <div class="widewrapper main">
     <div class="container about">
         <h1>
-            現在<span class="about-bold">TS3</span>は[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]です。
+            現在<span class="about-bold">ＴＳ３</span>は
+            <br>[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]です。
         </h1>
         <span class="about-medium">
             <p>　チャンネル作成依頼は下記のフォームよりメッセージの送信お願いします。</p>

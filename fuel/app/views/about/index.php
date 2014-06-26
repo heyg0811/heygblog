@@ -1,10 +1,10 @@
 <div class="widewrapper main">
     <div class="container about">
-        <h1>
-            ようこそ。<span class="about-bold">HeyG</span>ブログへ！
-        </h1>
+        <h2>
+            ようこそ。<span class="about-bold" style="color:#69bc87;">HeyG</span>ブログへ！
+        </h2>
         <span class="about-small">
-            <p><span class="about-medium">HeyG</span>はハンドルネームとして使っております。</p>
+            <p><span style="color:#69bc87;">HeyG</span>はハンドルネームとして使っております。</p>
             <p>長らくブログを作りたかったのですが、時間的に作れておりませんでした。</p>
             <p>合間を見つけて作っていく中で此の様なブログが出来ました。</p>
             <p>出来映えはさておき、動いているので良いじゃないかなと...</p>
