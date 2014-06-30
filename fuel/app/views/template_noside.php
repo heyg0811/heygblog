@@ -43,7 +43,7 @@
                 </a>
 
                 <div id="mobile-nav-toggle" class="pull-right">
-                    <a href="#" data-toggle="collapse" data-target=".heyg-nav .navbar-collapse">
+                    <a href="#" data-toggle="collapse" data-target=".heyg-nav .navbar-collapse" class="mobilenav">
                         <i class="icon-reorder"></i>
                     </a>
                 </div>

@@ -126,7 +126,7 @@ $(function(){
 });
 
 $(function(){
-    $('a[href^=#]').not('.tab').click(function(){
+    $('a[href^=#]').not('.tab').not('.mobilenav').click(function(){
         var speed = 1000;
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
