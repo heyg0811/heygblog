@@ -1,38 +1,6 @@
 <div class="widewrapper main">
     <div class="container about heyg-superblock">
             <h2>HeyG Blog</h2>
-            <div class="col-md-6 portfolio">
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog.png";?> data-lightbox="heygblog" data-title="Top">
-                        <?php echo Asset::img('heygblog.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog2.png";?> data-lightbox="heygblog" data-title="Artist View">
-                        <?php echo Asset::img('heygblog2.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog3.png";?> data-lightbox="heygblog" data-title="Music Play">
-                        <?php echo Asset::img('heygblog3.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog4.png";?> data-lightbox="heygblog" data-title="Artist Edit">
-                        <?php echo Asset::img('heygblog4.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog5.png";?> data-lightbox="heygblog" data-title="Artist Edit">
-                        <?php echo Asset::img('heygblog5.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/heygblog6.png";?> data-lightbox="heygblog" data-title="Artist Edit">
-                        <?php echo Asset::img('heygblog6.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-            </div>
             <div class="col-md-6">
                 <dl class="dl-horizontal">
                     <dt>作品名</dt>
@@ -83,6 +51,38 @@
                     </dd>
                     <dt>苦労した点</dt>
                     <dd>トップページの記事一覧 UIとデザイン</dd>
+            </div>
+            <div class="col-md-6 portfolio">
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog.png";?> data-lightbox="heygblog" data-title="Top">
+                        <?php echo Asset::img('heygblog.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog2.png";?> data-lightbox="heygblog" data-title="Artist View">
+                        <?php echo Asset::img('heygblog2.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog3.png";?> data-lightbox="heygblog" data-title="Music Play">
+                        <?php echo Asset::img('heygblog3.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog4.png";?> data-lightbox="heygblog" data-title="Artist Edit">
+                        <?php echo Asset::img('heygblog4.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog5.png";?> data-lightbox="heygblog" data-title="Artist Edit">
+                        <?php echo Asset::img('heygblog5.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/heygblog6.png";?> data-lightbox="heygblog" data-title="Artist Edit">
+                        <?php echo Asset::img('heygblog6.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
             </div>
     </div>
 </div>

@@ -1,28 +1,6 @@
 <div class="widewrapper main">
     <div class="container about heyg-superblock">
             <h2>Mufee</h2>
-            <div class="col-md-6 portfolio">
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee.png";?> data-lightbox="mufee" data-title="Top">
-                        <?php echo Asset::img('mufee.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee2.png";?> data-lightbox="mufee" data-title="Artist View">
-                        <?php echo Asset::img('mufee2.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee3.png";?> data-lightbox="mufee" data-title="Music Play">
-                        <?php echo Asset::img('mufee3.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-                <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee4.png";?> data-lightbox="mufee" data-title="Artist Edit">
-                        <?php echo Asset::img('mufee4.png',array('class'=>'img-responsive item'));?>
-                    </a>
-                </div>
-            </div>
             <div class="col-md-6">
                 <dl class="dl-horizontal">
                     <dt>作品名</dt>
@@ -77,6 +55,28 @@
                     <dd>UI設計とデザイン Auth画面 ＆ 機能 再生画面 ＆ 機能 メッセージ画面 ＆ 機能 それぞれ機能のDB作成</dd>
                     <dt>苦労した点</dt>
                     <dd>全体のUIとデザイン 再生画面のUI設計 playerと曲の連動</dd>
+            </div>
+            <div class="col-md-6 portfolio">
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/mufee.png";?> data-lightbox="mufee" data-title="Top">
+                        <?php echo Asset::img('mufee.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/mufee2.png";?> data-lightbox="mufee" data-title="Artist View">
+                        <?php echo Asset::img('mufee2.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/mufee3.png";?> data-lightbox="mufee" data-title="Music Play">
+                        <?php echo Asset::img('mufee3.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
+                <div class="col-md-6 item-cover">
+                    <a href=<?php echo Uri::base()."assets/img/mufee4.png";?> data-lightbox="mufee" data-title="Artist Edit">
+                        <?php echo Asset::img('mufee4.png',array('class'=>'img-responsive item'));?>
+                    </a>
+                </div>
             </div>
     </div>
 </div>

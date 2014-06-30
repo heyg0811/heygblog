@@ -1258,3 +1258,6 @@ fieldset[disabled] .btn-heyg-two.active {
   position:relative;
 }
 
+dd {
+  margin-bottom:8px;
+}
