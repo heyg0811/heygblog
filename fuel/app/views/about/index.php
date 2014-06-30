@@ -14,25 +14,71 @@
         <div class="about-button">
             <a class="btn btn-xlarge btn-heyg-one" href="#contact">ご意見・ご感想</a>
         </div>
+    <hr>
+    </div>
+    <div class="container heyg-superblock">
+        <h2>ぽーとふぉりお</h2>
+        <div class="col-md-6">
+            <article class="blog-post">
+                <header>
+                    <div class="lead-image">
+                        <a href="exam?id=1"><?php echo Asset::img('heygblog.png',array('class'=>'img-responsive'));?></a>
+                        <div class="meta clearfix">
+                            <div class="author">
+                                <i class="icon-folder-open"></i> <span class="data">HeyG Blog</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="blog-post">
+                <header>
+                    <div class="lead-image">
+                        <a href="exam?id=2"><?php echo Asset::img('mufee.png',array('class'=>'img-responsive'));?></a>
+                        <div class="meta clearfix">
+                            <div class="author">
+                                <i class="icon-folder-open"></i> <span class="data">Mufee</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="blog-post">
+                <header>
+                    <div class="lead-image">
+                        <a href="exam?id=3"><?php echo Asset::img('eta.png',array('class'=>'img-responsive'));?></a>
+                        <div class="meta clearfix">
+                            <div class="author">
+                                <i class="icon-folder-open"></i> <span class="data">eta</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </article>
+        </div>
         <hr>
     </div>
-
     <div class="container">
         <div class="row">
+            <hr>
             <div class="col-md-6 col-md-offset-3 heyg-superblock">
                 <h2>そーしゃる</h2>
                 <div class="social-icons clearfix">
-                    <a href="#" class="social-icon color-one">
+                    <a href="https://twitter.com/heyg0811" class="social-icon color-one">
                         <div class="inner-circle" ></div>
                         <i class="icon-twitter"></i>
                     </a>
 
-                    <a href="#" class="social-icon color-two">
+                    <a href="https://www.facebook.com/wkm0811" class="social-icon color-three">
                         <div class="inner-circle" ></div>
-                        <i class="icon-google-plus"></i>
+                        <i class="icon-facebook"></i>
                     </a>
 
-                    <a href="#" class="social-icon color-three">
+                    <a href="https://github.com/heyg0811" class="social-icon color-two">
                         <div class="inner-circle" ></div>
                         <i class="icon-github-alt"></i>
                     </a>

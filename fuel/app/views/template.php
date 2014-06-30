@@ -52,10 +52,10 @@
                         <div class="collapse navbar-collapse">
                             <ul class="nav nav-pills navbar-nav">
                                 <li class=<?php echo $title == "とっぷ"?"active":"";?>><a href="/">とっぷ</a></li>
-                                <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog">ぶろぐ</a></li>
-                                <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts">てぃーえす</a></li>
-                                <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance">がいだんす</a></li>
-                                <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about">あばうと</a></li>
+                                <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog/">ぶろぐ</a></li>
+                                <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts/">てぃーえす</a></li>
+                                <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance/">がいだんす</a></li>
+                                <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about/">あばうと</a></li>
                             </ul>
                         </div>
                     </nav>

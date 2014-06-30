@@ -4,13 +4,13 @@
 			<?php foreach($newArt as $val):?>
 			<?php if($val["article"][0]["category"] == $category):?>
 			<li class="active">
-				<a href=<?php echo "#".$val["article"][0]["category"];?> data-toggle="tab">
+				<a href=<?php echo "#".$val["article"][0]["category"];?> data-toggle="tab" class="tab">
 					<?php echo $val["article"][0]["category"];?>
 				</a>
 			</li>
 		<?php else:?>
 		<li class="">
-			<a href=<?php echo "#".$val["article"][0]["category"];?> data-toggle="tab">
+			<a href=<?php echo "#".$val["article"][0]["category"];?> data-toggle="tab" class="tab">
 				<?php echo $val["article"][0]["category"];?>
 			</a>
 		</li>

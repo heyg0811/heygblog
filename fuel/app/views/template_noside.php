@@ -22,6 +22,9 @@
     <!-- Styles -->
     <?php echo Asset::css('heygblog.css');?>
 
+    <!-- lightBox -->
+    <?php echo Asset::css('lightbox/lightbox.css');?>
+
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/ie8.css">
         <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
@@ -49,10 +52,10 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav nav-pills navbar-nav">
                             <li class=<?php echo $title == "とっぷ"?"active":"";?>><a href="/">とっぷ</a></li>
-                            <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog">ぶろぐ</a></li>
-                            <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts">てぃーえす</a></li>
-                            <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance">がいだんす</a></li>
-                            <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about">あばうと</a></li>
+                            <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog/">ぶろぐ</a></li>
+                            <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts/">てぃーえす</a></li>
+                            <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance/">がいだんす</a></li>
+                            <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about/">あばうと</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -129,6 +132,7 @@
 
     <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
     <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
+    <?php echo Asset::js('lightbox/lightbox.min.js');?>
     <?php echo Asset::js('original.js');?>
 
 </body>

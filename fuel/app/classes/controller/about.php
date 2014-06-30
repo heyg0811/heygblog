@@ -34,11 +34,39 @@ class Controller_About extends Controller_Template
 		Model_Counter::insertAddress("about");
 	}
 
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_exam()
+	{
+		$this->template->title = 'せつめい';
+		switch(Input::get("id",false)){
+			case 1:$this->template->content = View::forge('about/exam1');break;
+			case 2:$this->template->content = View::forge('about/exam2');break;
+			case 3:$this->template->content = View::forge('about/exam3');break;
+			case 4:$this->template->content = View::forge('about/exam4');break;
+			default:Response::redirect('/about');break;
+		}
+	}
+
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_confirm(){
 		$this->template->title = 'かくにん';
 		$this->template->content = View::forge('about/confirm');
 	}
 
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_confirmed(){
 		$email = \Email::forge('jis');
 		$email->from(Input::post("email",null), Input::post("name",null));
