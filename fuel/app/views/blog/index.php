@@ -66,14 +66,13 @@
 	<aside class="social-icons clearfix">
 		<a href=<?php echo "http://twitter.com/intent/tweet?text=".Uri::base()."blog?id=".$val["article"][0]["article_id"];?> class="social-icon color-one" onClick="window.open(encodeURI(decodeURI(this.href)),'tweetwindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'); return false;">
 			<div class="inner-circle"></div> <i class="icon-twitter"></i>
-		</a>
-		<a href="" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),null,'width=550px,height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');" class="social-icon color-two">
-			<div class="inner-circle"></div> <i class="icon-google-plus"></i>
-		</a>
-		<a href="" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(document.URL),null,'width=550px,height=350px');return false;" class="social-icon color-three">
-			<div class="inner-circle"></div> <i class="icon-facebook"></i>
-		</a>
-	</aside>
+		</a> <a href="" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),null,'width=550px,height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');" class="social-icon color-two">
+		<div class="inner-circle"></div> <i class="icon-google-plus"></i>
+	</a>
+	<a href="" onclick=<?php echo "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]."')+'&t='+encodeURIComponent('".$val["article"][0]["title"]."'),null,'width=550px,height=350px');return false;"?> class="social-icon color-three">
+	<div class="inner-circle"></div> <i class="icon-facebook"></i>
+</a>
+</aside>
 
 <aside class="comments" id="comments">
 	<hr>
