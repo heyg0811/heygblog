@@ -969,7 +969,7 @@ aside.comments .comment .body {
 .about-large,
 .about-medium,
 .about-small {
-  line-height: 60px;
+  line-height: 30px;
 }
 @media (max-width: 767px) {
   .about-large,
