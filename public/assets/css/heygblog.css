@@ -985,7 +985,7 @@ aside.comments .comment .body {
   .about-small > h2{
     font-size:0.9em;
   }
-  .about > h2,h1{
+  .about > h2, .about > h1{
     font-size:1.4em;
   }
   .about-small > p{

@@ -2,7 +2,7 @@
     <div class="container about">
         <h1>
             現在サーバーは[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]<br>
-            <span style="font-size:0.6em">申請は下記フォームより</span>
+            <span style="font-size:0.7em">申請は<a href="#contact">下記フォーム</a>より</span>
         </h1>
         <hr>
         <span class="about-small">
