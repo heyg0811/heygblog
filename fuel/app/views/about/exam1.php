@@ -30,22 +30,17 @@
                     <dd>
                         <div class="progress">
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span >デザイン・UI</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span>マネジメント</span>
+                                <span >デザイン・UI(100%)</span>
                             </div>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span>データベース</span>
+                                <span>データベース(100%)</span>
                             </div>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span>プログラム</span>
+                                <span>プログラム(100%)</span>
                             </div>
                         </div>
                     </dd>

@@ -34,11 +34,6 @@
                             </div>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span>マネジメント</span>
-                            </div>
-                        </div>
-                        <div class="progress">
                             <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                                 <span>データベース</span>
                             </div>
