@@ -30,9 +30,8 @@
 			<header>
 				<h1><?php echo $val["article"][0]["title"]?></h1>
 				<div class="lead-image">
-					<?php echo Asset::img('hands-big.png',array('class'=>'img-responsive'));?>
+					<?php echo Asset::img('blog/'.$val["article"][0]["img"].".gif",array('class'=>'img-responsive'));?>
 					<div class="meta clearfix">
-
 						<div class="author">
 							<i class="icon-user"></i> <span class="data"><?php echo $val["article"][0]["name"]?></span>
 						</div>

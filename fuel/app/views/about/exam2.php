@@ -58,23 +58,23 @@
             </div>
             <div class="col-md-6 portfolio">
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee.png";?> data-lightbox="mufee" data-title="Top">
-                        <?php echo Asset::img('mufee.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/mufee.png";?> data-lightbox="mufee" data-title="Top">
+                        <?php echo Asset::img('portfolio/mufee.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee2.png";?> data-lightbox="mufee" data-title="Artist View">
-                        <?php echo Asset::img('mufee2.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/mufee2.png";?> data-lightbox="mufee" data-title="Artist View">
+                        <?php echo Asset::img('portfolio/mufee2.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee3.png";?> data-lightbox="mufee" data-title="Music Play">
-                        <?php echo Asset::img('mufee3.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/mufee3.png";?> data-lightbox="mufee" data-title="Music Play">
+                        <?php echo Asset::img('portfolio/mufee3.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/mufee4.png";?> data-lightbox="mufee" data-title="Artist Edit">
-                        <?php echo Asset::img('mufee4.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/mufee4.png";?> data-lightbox="mufee" data-title="Artist Edit">
+                        <?php echo Asset::img('portfolio/mufee4.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
             </div>

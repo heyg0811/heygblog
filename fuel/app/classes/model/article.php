@@ -10,6 +10,7 @@ class Model_Article extends \Orm\Model
 		'title',
 		'body',
 		'tag',
+		'img',
 		'created_at',
 		'updated_at',
 		);
@@ -119,7 +120,7 @@ class Model_Article extends \Orm\Model
 		->from("articles")
 		->offset($offset)
 		->limit(4)
-		->order_by("article_id","asc")
+		->order_by("created_at","desc")
 		->execute()
 		->as_array();
 		return $result;

@@ -49,38 +49,38 @@
             </div>
             <div class="col-md-6 portfolio">
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta1.png";?> data-lightbox="eta" data-title="とっぷ">
-                        <?php echo Asset::img('eta1.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta1.png";?> data-lightbox="eta" data-title="とっぷ">
+                        <?php echo Asset::img('portfolio/eta1.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta2.png";?> data-lightbox="eta" data-title="店舗紹介">
-                        <?php echo Asset::img('eta2.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta2.png";?> data-lightbox="eta" data-title="店舗紹介">
+                        <?php echo Asset::img('portfolio/eta2.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta3.png";?> data-lightbox="eta" data-title="お知らせ">
-                        <?php echo Asset::img('eta3.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta3.png";?> data-lightbox="eta" data-title="お知らせ">
+                        <?php echo Asset::img('portfolio/eta3.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta4.png";?> data-lightbox="eta" data-title="お品書き">
-                        <?php echo Asset::img('eta4.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta4.png";?> data-lightbox="eta" data-title="お品書き">
+                        <?php echo Asset::img('portfolio/eta4.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta5.png";?> data-lightbox="eta" data-title="葡萄酒">
-                        <?php echo Asset::img('eta5.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta5.png";?> data-lightbox="eta" data-title="葡萄酒">
+                        <?php echo Asset::img('portfolio/eta5.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta6.png";?> data-lightbox="eta" data-title="店舗画像">
-                        <?php echo Asset::img('eta6.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta6.png";?> data-lightbox="eta" data-title="店舗画像">
+                        <?php echo Asset::img('portfolio/eta6.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
                 <div class="col-md-6 item-cover">
-                    <a href=<?php echo Uri::base()."assets/img/eta7.png";?> data-lightbox="eta" data-title="採用情報">
-                        <?php echo Asset::img('eta7.png',array('class'=>'img-responsive item'));?>
+                    <a href=<?php echo Uri::base()."assets/img/portfolio/eta7.png";?> data-lightbox="eta" data-title="採用情報">
+                        <?php echo Asset::img('portfolio/eta7.png',array('class'=>'img-responsive item'));?>
                     </a>
                 </div>
             </div>

@@ -22,7 +22,7 @@
             <article class="blog-post">
                 <header>
                     <div class="lead-image">
-                        <a href="exam?id=1"><?php echo Asset::img('heygblog.png',array('class'=>'img-responsive'));?></a>
+                        <a href="exam?id=1"><?php echo Asset::img('portfolio/heygblog.png',array('class'=>'img-responsive'));?></a>
                         <div class="meta clearfix">
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">HeyG Blog</span>
@@ -36,7 +36,7 @@
             <article class="blog-post">
                 <header>
                     <div class="lead-image">
-                        <a href="exam?id=2"><?php echo Asset::img('mufee.png',array('class'=>'img-responsive'));?></a>
+                        <a href="exam?id=2"><?php echo Asset::img('portfolio/mufee.png',array('class'=>'img-responsive'));?></a>
                         <div class="meta clearfix">
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">Mufee</span>
@@ -50,7 +50,7 @@
             <article class="blog-post">
                 <header>
                     <div class="lead-image">
-                        <a href="exam?id=3"><?php echo Asset::img('eta.png',array('class'=>'img-responsive'));?></a>
+                        <a href="exam?id=3"><?php echo Asset::img('portfolio/eta.png',array('class'=>'img-responsive'));?></a>
                         <div class="meta clearfix">
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">eta</span>
