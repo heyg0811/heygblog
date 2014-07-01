@@ -77,51 +77,48 @@ function artCount(){
     return count;
 }
 
-function paging(page,ev) {
+function paging(page) {
     $.ajax({
         type: "POST",
         url: "/ajax/paging",
         dataType:"json",
         data: {"page": page},
         success: function(data, dataType){
-            var target = document.getElementById("target");
-            var html = "<div class='col-md-12' id='target'><div class='row target' id='nowpage'>";
+            var target = $("#target");
+            var html = "<div class='col-md-12 stealth' id='target'><div class='row'>";
             for(i=0;data.length > i; i++){
                 html = html + "<div class='col-md-6 col-sm-6'><article class='blog-teaser'><header><img src='http://heyg.pw/assets/img/"+ data[i].category +".png'><h3><a href='blog?id="+ data[i].article_id +"'>"+ data[i].title +"</a></h3><span class='meta'>"+ data[i].created_at +"</span><hr></header><div class='body'>"+ data[i].body +"</div><div class='clearfix'><a href='blog?id="+ data[i].article_id +"' class='btn btn-heyg-one'>Read more</a></div></article></div>";
             }
             html = html + "</div></div>";
             $('#blogMain').prepend(html);
-            if(ev == "next"){
-                setTimeout(classie.add,100,document.getElementById("target"),"next-effect2");
-            }else if(ev == "back"){
-                setTimeout(classie.add,100,document.getElementById("target"),"back-effect2");
-            }
+            $('#target').animate({opacity: 1},{duration:1000});
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
         }
     });
 }
-
 $(function(){
     var page = 1;
     var count = artCount();
     $('#newer').click(function(){
-        classie.add(document.getElementById("target"),"next-effect1");
-        setTimeout(function(){
-            document.getElementById("target").remove();
-            page = page + 1;
-            if(count < page*4)page = 1;
-            paging(page,"next");
-        },2400);
+        $('#target').animate({opacity: 0},{duration:1000,
+            complete: function(){
+                $('#target').remove();
+                page = page + 1;
+                if(count < page*4)page = 1;
+                paging(page);
+            }
+        });
     });
     $('#older').click(function(){
-        classie.add(document.getElementById("target"),"back-effect1");
-        setTimeout(function(){
-            document.getElementById("target").remove();
-            page = page - 1;
-            if(page <= 0)page=count/4;
-            paging(page,"back");
-        },2400);
+        $('#target').animate({opacity: 0},{duration:1000,
+            complete: function(){
+                $('#target').remove();
+                page = page - 1;
+                if(page <= 0)page=count/4;
+                paging(page);
+            }
+        });
     });
 });
 

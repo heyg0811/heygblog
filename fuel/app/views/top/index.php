@@ -1,5 +1,5 @@
 <div class="col-md-8 blog-main" id="blogMain">
-    <div class="col-md-12 next-effect2" id="target">
+    <div class="col-md-12" id="target">
         <div class="row" id="nowpage">
             <?php foreach($articleNow as $val):?>
             <div class="col-md-6 col-sm-6">

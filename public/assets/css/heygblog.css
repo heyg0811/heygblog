@@ -507,6 +507,14 @@ hr {
   .blog-aside {
     padding-top: 50px;
   }
+  .blog-main{
+    min-height:2400px;
+  }
+}
+@media (max-width: 320px){
+  .blog-main{
+    min-height:2655px;
+  }
 }
 .blog-aside:before {
   left: 15px;
@@ -1163,74 +1171,13 @@ fieldset[disabled] .btn-heyg-two.active {
   height:76px;
 }
 
-/*
- *  トップページング用
- */
-
-#target{
-  -webkit-transition: all 2.5s;
-  -moz-transition: all 2.5s;
-  -ms-transition: all 2.5s;
-  -o-transition: all 2.5s;
-  transition: all 2.5s;
-  visibility:hidden;
-}
-#target.next-effect1.next-effect2{
-  visibility:visible;
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transform: translateX(-200%);
-}
-#target.next-effect1.back-effect2{
-  visibility:visible;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-
-#target.next-effect2{
-  visibility:visible;
-  right:-100%;
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-#target.next-effect2.back-effect1{
-  visibility:visible;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-
-#target.back-effect2{
-  visibility:visible;
-  left:-100%;
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
-}
-#target.back-effect1.back-effect2{
-  visibility:visible;
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
-}
 
 .margin-top-5{
   margin-top:50px;
+}
+
+.stealth{
+  opacity:0;
 }
 
 /*
