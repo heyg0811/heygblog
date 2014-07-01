@@ -1,12 +1,9 @@
 <div class="widewrapper main">
     <div class="container about">
         <h1>
-            現在<span class="about-bold">ＴＳ３</span>は
-            [<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]です
+            現在サーバーは[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]<br>
+            <span style="font-size:0.6em">申請は下記フォームより</span>
         </h1>
-        <span class="about-medium">
-            <p>チャンネル作成依頼は下記のより</p>
-        </span>
         <hr>
         <span class="about-small">
             <h2> - ご利用ユーザーの皆様へ<span style="font-size:0.5em">　使用上の注意をよく読み用法・要領を守って正しくご使用ください。</span></h2>

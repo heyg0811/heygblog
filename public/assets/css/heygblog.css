@@ -977,6 +977,20 @@ aside.comments .comment .body {
   .about-small {
     display: block;
   }
+  .about-small > h2{
+    font-size:1.2em;
+  }
+}
+@media(max-width: 320px){
+  .about-small > h2{
+    font-size:0.9em;
+  }
+  .about > h2,h1{
+    font-size:1.4em;
+  }
+  .about-small > p{
+    font-size:0.8em;
+  }
 }
 .about-large {
   font-size: 40px;
