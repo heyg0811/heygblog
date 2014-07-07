@@ -27,7 +27,9 @@
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">HeyG Blog</span>
                             </div>
-                        </div>
+                            <div class="date">
+                                <i class="icon-eye-open"></i> <span class="data">WEB</span>
+                            </div>
                     </div>
                 </header>
             </article>
@@ -40,6 +42,9 @@
                         <div class="meta clearfix">
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">Mufee</span>
+                            </div>
+                            <div class="date">
+                                <i class="icon-eye-open"></i> <span class="data">WEB</span>
                             </div>
                         </div>
                     </div>
@@ -54,6 +59,26 @@
                         <div class="meta clearfix">
                             <div class="author">
                                 <i class="icon-folder-open"></i> <span class="data">eta</span>
+                            </div>
+                            <div class="date">
+                                <i class="icon-eye-open"></i> <span class="data">WEB</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </article>
+        </div>
+        <div class="col-md-6">
+            <article class="blog-post">
+                <header>
+                    <div class="lead-image">
+                        <a href="exam?id=4"><?php echo Asset::img('portfolio/hitoridachi.gif',array('class'=>'img-responsive'));?></a>
+                        <div class="meta clearfix">
+                            <div class="author">
+                                <i class="icon-folder-open"></i> <span class="data">eta</span>
+                            </div>
+                            <div class="date">
+                                <i class="icon-eye-open"></i> <span class="data">Android</span>
                             </div>
                         </div>
                     </div>
