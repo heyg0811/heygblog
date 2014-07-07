@@ -62,7 +62,7 @@
                     15=>"ガチャガチャ",16=>"アイテムゲット",17=>"図鑑(トリ)",18=>"図鑑(家具)",19=>"図鑑(内外装)",
                 )?>
                 <?php for($i=0;$i<=19;$i++):?>
-                    <div class="col-md-3 item-cover">
+                    <div class="col-xs-6 col-sm-4 col-md-3 item-cover">
                         <a href=<?php echo Uri::base()."assets/img/portfolio/hitoridachi".$i.".png";?> data-lightbox="hitoridachi" data-title=<?php echo $title[$i];?>>
                             <?php echo Asset::img('portfolio/hitoridachi'.$i.'.png',array('class'=>'img-responsive item'));?>
                         </a>

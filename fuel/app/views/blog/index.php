@@ -56,7 +56,7 @@
 					<?php if($i % 2 == 0):?>
 						<?php echo nl2br($temp[$i]);?>
 					<?php else:?>
-						<pre class="brush: html;"><?php echo $temp[$i];?></pre>
+						<pre class="brush: php;"><?php echo $temp[$i];?></pre>
 					<?php endif;?>
 				<?php endfor;?>
 			<?php endif;?>

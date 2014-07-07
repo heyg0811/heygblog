@@ -16,7 +16,7 @@
         </div>
     <hr>
     </div>
-    <div class="container heyg-superblock">
+    <div class="container heyg-superblock" id="portfolio">
         <h2>ぽーとふぉりお</h2>
         <div class="col-md-6">
             <article class="blog-post">
@@ -85,12 +85,11 @@
                 </header>
             </article>
         </div>
-        <hr>
     </div>
     <div class="container">
         <div class="row">
             <hr>
-            <div class="col-md-6 col-md-offset-3 heyg-superblock">
+            <div class="col-md-8 col-md-offset-2 heyg-superblock">
                 <h2>そーしゃる</h2>
                 <div class="social-icons clearfix">
                     <a href="https://twitter.com/heyg0811" class="social-icon color-one">
