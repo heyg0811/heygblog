@@ -9,15 +9,15 @@
                 <form action="confirmed" method="post" accept-charset="utf-8">
                     <div class="row">
                         <input type="hidden" name="name" value=<?php echo Input::post("name",null);?>>
-                        <input disabled type="text" name="name" value=<?php echo Input::post("body",null);?> id="contact-name" placeholder="なまえ" class="form-control input-lg">
+                        <input disabled type="text" name="name" placeholder="No name" class="form-control input-lg" value=<?php echo Input::post("body",null);?>>
                         <input type="hidden" name="email" value=<?php echo Input::post("email",null);?>>
-                        <input disabled type="email" name="email" value=<?php echo Input::post("email",null);?> id="contact-email" placeholder="めーる" class="form-control input-lg">
+                        <input disabled type="email" name="email" placeholder="No mailaddress" class="form-control input-lg" value=<?php echo Input::post("email",null);?>>
                         <input type="hidden" name="body" value=<?php echo Input::post("body",null);?>>
-                        <textarea disabled rows="10" name="body" id="contact-body" placeholder="なにか書いてね" class="form-control input-lg"><?php echo Input::post("body",null);?></textarea>
+                        <textarea disabled rows="10" name="body" placeholder="No body" class="form-control input-lg"><?php echo Input::post("body",null);?></textarea>
 
                         <div class="buttons clearfix">
                             <button type="submit" class="btn btn-xlarge btn-heyg-one">おっけ</button>
-                            <button class="btn btn-xlarge btn-heyg-two">きゃんせる</button>
+                            <a href=<?php echo $_SERVER['HTTP_REFERER']; ?> class="btn btn-xlarge btn-heyg-two">きゃんせる</a>
                         </div>
                     </form>
                 </aside>

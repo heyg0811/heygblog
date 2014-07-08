@@ -113,11 +113,10 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3 heyg-superblock" id="contact">
                 <h2>ご意見・感想</h2>
-
                 <form action="/about/confirm" method="post" accept-charset="utf-8" class="contact-form">
-                    <input type="text" name="name" id="contact-name" placeholder="なまえ" class="form-control input-lg">
-                    <input type="email" name="email" id="contact-email" placeholder="めーる" class="form-control input-lg">
-                    <textarea rows="10" name="body" id="contact-body" placeholder="なにか書いてね" class="form-control input-lg"></textarea>
+                    <input type="text" name="name" id="contact-name" placeholder="なまえ" class="form-control input-lg validate[required]" value="">
+                    <input type="email" name="email" id="contact-email" placeholder="めーる" class="form-control input-lg validate[custom[email]]" value="">
+                    <textarea rows="10" name="body" id="contact-body" placeholder="なにか書いてね" class="form-control input-lg validate[required]"></textarea>
                     <div class="buttons clearfix">
                         <button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
                     </div>

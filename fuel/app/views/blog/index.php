@@ -112,22 +112,21 @@
 	<div class="row">
 		<div class="col-md-6">
 			<input type="text" name="name" id="comment-name"
-			placeholder="なまえ" class="form-control input-lg">
+			placeholder="なまえ" class="form-control input-lg validate[required]">
 		</div>
 		<div class="col-md-6">
 			<input type="email" name="email" id="comment-email"
-			placeholder="めーる" class="form-control input-lg">
+			placeholder="めーる" class="form-control input-lg validate[custom[email]]">
 		</div>
 	</div>
 
 	<input type="url" name="url" id="comment-url"
-	placeholder="うぇぶさいと" class="form-control input-lg">
+	placeholder="うぇぶさいと" class="form-control input-lg validate[custom[url]]">
 
 	<textarea rows="10" name="body" id="comment-body"
-	placeholder="なにか書いてね" class="form-control input-lg"></textarea>
+	placeholder="なにか書いてね" class="form-control input-lg validate[required]"></textarea>
 	<div class="buttons clearfix">
 		<button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
-		<button class="btn btn-xlarge btn-heyg-two">きゃんせる</button>
 	</div>
 </aside>
 </form>

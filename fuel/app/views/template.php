@@ -20,10 +20,11 @@
     <!-- Font-Awesome -->
     <?php echo Asset::css('vendor/font-awesome/font-awesome.css');?>
 
-    <!-- Google Webfonts -->
-
     <!-- Styles -->
     <?php echo Asset::css('heygblog.css');?>
+
+    <!-- validationEngine -->
+    <?php echo Asset::css('validationengine/validationEngine.css')?>
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/ie8.css">
@@ -189,6 +190,8 @@
 <?php echo Asset::js('syntaxhighlighter/shAutoloader.js');?>
 <?php echo Asset::js('syntaxhighlighter/shBrushXml.js');?>
 <?php echo Asset::js('syntaxhighlighter/shBrushPhp.js');?>
+<?php echo Asset::js('validationengine/validationEngine-ja.js');?>
+<?php echo Asset::js('validationengine/validationEngine.js');?>
 <?php echo Asset::js('original.js');?>
 <script type="text/javascript">
     SyntaxHighlighter.autoloader(

@@ -16,14 +16,14 @@
     <!-- Font-Awesome -->
     <?php echo Asset::css('vendor/font-awesome/font-awesome.css');?>
 
-    <!-- Google Webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
-
     <!-- Styles -->
     <?php echo Asset::css('heygblog.css');?>
 
     <!-- lightBox -->
     <?php echo Asset::css('lightbox/lightbox.css');?>
+
+    <!-- validationEngine -->
+    <?php echo Asset::css('validationengine/validationEngine.css')?>
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/ie8.css">
@@ -133,7 +133,8 @@
     <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
     <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
     <?php echo Asset::js('lightbox/lightbox.min.js');?>
+    <?php echo Asset::js('validationengine/validationEngine-ja.js');?>
+    <?php echo Asset::js('validationengine/validationEngine.js');?>
     <?php echo Asset::js('original.js');?>
-
 </body>
 </html>
