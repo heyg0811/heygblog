@@ -32,4 +32,38 @@ class Controller_Ts extends Controller_Template
         $this->template->title = 'てぃーえす';
         $this->template->content = View::forge('ts/index');
 	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_confirm(){
+		$this->template->title = 'かくにん';
+		$this->template->content = View::forge('about/confirm');
+	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_confirmed(){
+		$email = \Email::forge('jis');
+		$email->from(Input::post("email",null), Input::post("name",null));
+		$email->to('heyg0811@gmail.com');
+		$email->subject('TS申請・連絡');
+		$body = Input::post("body",null);
+		$email->body(mb_convert_encoding($body, 'jis'));
+		try {
+			$email->send();
+		}
+		catch (\EmailValidationFailedException $e) {
+			$err_msg = '送信に失敗しました。';
+		}
+		catch (\EmailSendingFailedException $e) {
+			$err_msg = '送信に失敗しました。';
+		}
+		return Response::redirect('ts/');
+	}
 }
