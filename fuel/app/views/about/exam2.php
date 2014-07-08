@@ -11,6 +11,16 @@
                     <dd>今までの曲を選ぶ方式ではなく、ランダムに再生する事で、より直感的音楽を届ける</dd>
                     <dt>サービス背景</dt>
                     <dd>バンドマン(特にインディーズ)の方の頑張りに対しての反響が、比例していない現状を見て、有名だから、無名だからと言う壁を取払う事を考えた結果、このようなサービスが出来上がった。</dd>
+                    <dt>サービス仕様</dt>
+                    <dd>
+                        曲はアーティストに投稿して頂く形です。
+                    </dd>
+                    <dd>
+                        曲の再生方法はトップ画面のジャンル選択にてジャンルを選んで頂き、再生ボタンを押すと、そのジャンルで登録されている曲が半永久ランダムに再生されるようになっています。
+                    </dd>
+                    <dd>
+                        再生に会員登録は不要です。
+                    </dd>
                 </dl>
                 <dl class="dl-horizontal">
                     <dt>制作人数</dt>
@@ -32,22 +42,22 @@
                     <dd>
                         <div class="progress">
                             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span >デザイン・UI(100%)</span>
+                                <span >デザイン・UI(100)</span>
                             </div>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                <span>マネジメント(100%)</span>
+                                <span>マネジメント(100)</span>
                             </div>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                <span>データベース(50%)</span>
+                                <span>データベース(50)</span>
                             </div>
                         </div>
                         <div class="progress">
                             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                <span>プログラム(40%)</span>
+                                <span>プログラム(40)</span>
                             </div>
                         </div>
                     </dd>

@@ -176,7 +176,7 @@
                     <span></span>
 
                     <span class="email">
-                        <a href="#">heyg0811@gmail.com</a>
+                        <a href="/about/">heyg0811@gmail.com</a>
                     </span>
                 </div>
             </div>
