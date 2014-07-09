@@ -31,5 +31,6 @@ class Controller_Message extends Controller_Template
 	{
         $this->template->title = 'めっせーじ';
         $this->template->content = View::forge('message/index');
+        $this->template->breadcrumb = array(array("url" => "/message/", "name" => "Message"));
 	}
 }

@@ -30,6 +30,7 @@ class Controller_Blog extends Controller_Template
 	public function action_index(){
         $this->template->title = 'ぶろぐ';
         $this->template->content = View::forge('blog/index');
+        $this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"));
         $workArt = Model_Article::getCate("work");
         $realArt = Model_Article::getCate("real");
         $gameArt = Model_Article::getCate("game");
@@ -67,6 +68,7 @@ class Controller_Blog extends Controller_Template
     public function action_confirm(){
         $this->template->title = 'かくにん';
         $this->template->content = View::forge('blog/confirm');
+        $this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"),array("url"=>"/blog/","name" => "Confirm"));
     }
 
     public function action_confirmed(){

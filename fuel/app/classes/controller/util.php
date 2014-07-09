@@ -30,6 +30,7 @@ class Controller_Util extends Controller_Template
 	public function action_tag(){
 		$this->template->title='たぐ検索';
 		$this->template->content = View::forge('util/tag');
+		$this->template->breadcrumb = array(array("url" => "/util/tag", "name" => "Tag search"));
 		$result = Model_Article::searchTag(Input::get("tag",null));
 		$this->template->content->article = $result;
 		$this->template->content->tag = Input::get("tag",null);
@@ -38,6 +39,7 @@ class Controller_Util extends Controller_Template
 	public function action_search(){
 		$this->template->title = 'けんさく';
 		$this->template->content = View::forge('util/search');
+		$this->template->breadcrumb = array(array("url" => "/util/search", "name" => "Word search"));
 		$result = Model_Article::searchWord(Input::post("sword",null));
 		$this->template->content->word = Input::post("sword",null);
 		$this->template->content->article = $result;
@@ -48,8 +50,9 @@ class Controller_Util extends Controller_Template
 	 * @access  public
 	 * @return  Response
 	 */
-	public function action_404()
-	{
-		return Response::forge(ViewModel::forge('util/404'), 404);
+	public function action_404(){
+		$this->template->title = 'けんさく';
+		$this->template->content = View::forge('util/404');
+		$this->template->breadcrumb = array(array("url" => "/util/404", "name" => "404 Not Found"));
 	}
 }

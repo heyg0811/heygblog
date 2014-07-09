@@ -32,6 +32,7 @@ class Controller_About extends Controller_Template
 		$this->template->title = 'あばうと';
 		$this->template->content = View::forge('about/index');
 		Model_Counter::insertAddress("about");
+		$this->template->breadcrumb = array(array("url" => "/about/", "name" => "About"));
 	}
 
 	/**
@@ -42,6 +43,7 @@ class Controller_About extends Controller_Template
 	public function action_exam()
 	{
 		$this->template->title = 'せつめい';
+		$this->template->breadcrumb = array(array("url" => "/about/", "name" => "About"),array("url" => "", "name" => "Exam"));
 		switch(Input::get("id",false)){
 			case 1:$this->template->content = View::forge('about/exam1');break;
 			case 2:$this->template->content = View::forge('about/exam2');break;
@@ -60,6 +62,7 @@ class Controller_About extends Controller_Template
 	public function action_confirm(){
 		$this->template->title = 'かくにん';
 		$this->template->content = View::forge('about/confirm');
+		$this->template->breadcrumb = array(array("url" => "/about/", "name" => "ABOUT"),array("url"=>"/about/","name"=>"Confirm"));
 	}
 
 	/**

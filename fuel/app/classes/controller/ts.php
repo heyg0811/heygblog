@@ -31,6 +31,7 @@ class Controller_Ts extends Controller_Template
 	{
         $this->template->title = 'てぃーえす';
         $this->template->content = View::forge('ts/index');
+        $this->template->breadcrumb = array(array("url" => "/ts/", "name" => "TS"));
 	}
 
 	/**
@@ -41,6 +42,7 @@ class Controller_Ts extends Controller_Template
 	public function action_confirm(){
 		$this->template->title = 'かくにん';
 		$this->template->content = View::forge('about/confirm');
+		$this->template->content->breadcrumb = array(array("url" => "/ts/", "name" => "TS"),array("url"=>"/ts/","name"=>"confirm"));
 	}
 
 	/**

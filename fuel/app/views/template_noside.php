@@ -67,6 +67,12 @@
             <div class="container">
                 <div class="heyg-breadcrumb">
                     <a href="/">Top</a>
+                    <?php if(!empty($breadcrumb)): ?>
+                        <?php foreach ($breadcrumb as $val): ?>
+                            <span class="separator">&#x2F;</span>
+                            <a href="<?php echo $val["url"] ?>"><?php echo $val["name"]; ?></a>
+                        <?php endforeach; ?>
+                    <?php endif?>
                 </div>
 
                 <div class="heyg-searchbox">
