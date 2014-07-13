@@ -43,7 +43,6 @@ class Model_Counter extends \Orm\Model
 	}
 
 	public static function insertAddress($path,$id = null){
-		var_dump(Model_Counter::deviceCheck());
 		if(Model_Counter::checkAddress($path,$id)){
 			$table = "counters";
 			$columns = array("ip","path","article_id","device","created_at","updated_at");

@@ -30,7 +30,6 @@ class Controller_Top extends Controller_Template
 	 */
 	public function action_index()
 	{
-		var_dump(Model_Counter::countArea("w"));exit;
 		$this->template->title = 'とっぷ';
 		$this->template->content = View::forge('top/index');
 		$count = Model_Article::countRow();
