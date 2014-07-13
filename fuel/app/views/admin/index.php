@@ -2,11 +2,11 @@
     <div class="navbar-inner">
         <div class="container-fluid">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-           </a>
-           <a class="brand" href="#">Admin Panel</a>
-           <div class="nav-collapse collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+         <a class="brand" href="#">Admin Panel</a>
+         <div class="nav-collapse collapse">
             <ul class="nav pull-right">
                 <li class="dropdown">
                     <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
@@ -138,33 +138,12 @@
 
         <!--/span-->
         <div class="span9" id="content">
-            <!-- morris stacked chart -->
-            <div class="row-fluid">
-                <!-- block -->
-                <div class="block">
-                    <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">Morris.js stacked</div>
-                        <div class="pull-right" id="sb">
-                            <span class="badge badge-warning" data-filter="w">週</span>
-                            <span class="badge badge-warning" data-filter="m">月</span>
-                            <span class="badge badge-warning" data-filter="y">年</span>
-                        </div>
-                    </div>
-                    <div class="block-content collapse in">
-                        <div class="span12">
-                            <div id="hero-area" style="height: 250px;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /block -->
-            </div>
-
             <!-- morris graph chart -->
             <div class="row-fluid section">
-             <!-- block -->
-             <div class="block">
+               <!-- block -->
+               <div class="block">
                 <div class="navbar navbar-inner block-header">
-                    <div class="muted pull-left">Morris.js <small>Monthly growth</small></div>
+                    <div class="muted pull-left"><small>アクセス総数</small></div>
                     <div class="pull-right" id="gb">
                         <span class="badge badge-warning" data-filter="w">週</span>
                         <span class="badge badge-warning" data-filter="m">月</span>
@@ -179,6 +158,27 @@
             </div>
             <!-- /block -->
         </div>
+        <!-- morris stacked chart -->
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left"><small>デバイス別アクセス</small></div>
+                    <div class="pull-right" id="sb">
+                        <span class="badge badge-warning" data-filter="w">週</span>
+                        <span class="badge badge-warning" data-filter="m">月</span>
+                        <span class="badge badge-warning" data-filter="y">年</span>
+                    </div>
+                </div>
+                <div class="block-content collapse in">
+                    <div class="span12">
+                        <div id="hero-area" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /block -->
+        </div>
+
         <div class="row-fluid">
             <!-- block -->
             <div class="block">
