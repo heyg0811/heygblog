@@ -73,7 +73,7 @@ class Controller_About extends Controller_Template
 	public function action_confirmed(){
 		$email = \Email::forge('jis');
 		$email->from(Input::post("email",null), Input::post("name",null));
-		$email->to('heyg0811@gmail.com');
+		$email->to('heyg.pw@gmail.com');
 		$email->subject('ご意見・感想');
 		$body = Input::post("body",null);
 		$email->body(mb_convert_encoding($body, 'jis'));

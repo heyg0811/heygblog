@@ -25,7 +25,7 @@ class Controller_Ajax extends Controller_Rest
 	/**
 	 *
 	 * @access  public
-	 * @return  No return
+	 * @return  JSON
 	 */
 	public function post_paging(){
 		$result = Model_Article::getPage($_POST['page']);
@@ -59,12 +59,38 @@ class Controller_Ajax extends Controller_Rest
 	/**
 	 *
 	 * @access  public
-	 * @return  No return
+	 * @return  JSON
 	 */
 	public function post_count(){
 		//JSON形式で出力する
 		header('Content-Type: application/json');
 		echo json_encode(Model_Article::count());
+		exit;
+	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  JSON
+	 */
+	public function post_getgraph(){
+
+		//JSON形式で出力する
+		header('Content-Type: application/json');
+		echo json_encode(Model_Counter::countGraph(Input::post("dataFilter",null)));
+		exit;
+	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  JSON
+	 */
+	public function post_getarea(){
+
+		//JSON形式で出力する
+		header('Content-Type: application/json');
+		echo json_encode(Model_Counter::countArea(Input::post("dataFilter",null)));
 		exit;
 	}
 }

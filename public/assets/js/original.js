@@ -9,9 +9,9 @@
 
  function classReg( className ) {
     return new RegExp("(^|ﾂ･ﾂ･s+)" + className + "(ﾂ･ﾂ･s+|$)");
- }
- var hasClass, addClass, removeClass;
- if ( 'classList' in document.documentElement ) {
+}
+var hasClass, addClass, removeClass;
+if ( 'classList' in document.documentElement ) {
     hasClass = function( elem, c ) {
         return elem.classList.contains( c );
     };
@@ -21,8 +21,8 @@
     removeClass = function( elem, c ) {
         elem.classList.remove( c );
     };
- }
- else {
+}
+else {
     hasClass = function( elem, c ) {
         return classReg( c ).test( elem.className );
     };
@@ -34,12 +34,12 @@
     removeClass = function( elem, c ) {
         elem.className = elem.className.replace( classReg( c ), ' ' );
     };
- }
- function toggleClass( elem, c ) {
+}
+function toggleClass( elem, c ) {
     var fn = hasClass( elem, c ) ? removeClass : addClass;
     fn( elem, c );
- }
- var classie = {
+}
+var classie = {
   // full names
   hasClass: hasClass,
   addClass: addClass,
@@ -133,7 +133,7 @@ $(function(){
     });
 });
 
-$(window).load(function () {
+$(window).load(function(){
     jQuery("form").validationEngine();
 });
 

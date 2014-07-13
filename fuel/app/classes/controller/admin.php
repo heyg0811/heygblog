@@ -39,6 +39,7 @@ class Controller_Admin extends Controller_Template
 			'logined',
 			'logout',
 			'index',
+			'stats',
 			);
 		if (in_array($method, $auth_methods) && !Auth::check()) {
 			Response::redirect('admin/login');
@@ -48,7 +49,7 @@ class Controller_Admin extends Controller_Template
 			'login',
 			);
 		if (in_array($method, $nologin_methods) && Auth::check()) {
-			Response::redirect('admin/logined');
+			Response::redirect('admin/index');
 		}
 		// CSRFチェック
 		if (Input::method() === 'POST') {
@@ -99,10 +100,6 @@ class Controller_Admin extends Controller_Template
 	{
 		$this->template->title = 'あどみん';
 		$this->template->content = View::forge('admin/index');
-	}
-	public function action_stats(){
-		$this->template->title = 'すたっつ';
-		$this->template->content = View::forge('admin/stats');
 	}
 
 	private function validate_login()
