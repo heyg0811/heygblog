@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>あどみん</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
   <!-- Bootstrap styles -->
   <?php echo Asset::css('admintheme/bootstrap.min.css');?>
   <?php echo Asset::css('admintheme/bootstrap-responsive.min.css');?>
