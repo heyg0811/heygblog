@@ -37,5 +37,6 @@ class Controller_Top extends Controller_Template
 		$this->template->content->article = Model_Article::getPage(1);
 
 		Model_Counter::insertAddress("top");
+		Model_User::insertUser($_SERVER["REMOTE_ADDR"]);
 	}
 }

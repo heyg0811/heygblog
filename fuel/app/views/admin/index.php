@@ -116,22 +116,16 @@
                     <a href="index"><i class="icon-chevron-right"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">731</span> コメント</a>
+                    <a href="#"><span class="badge badge-success pull-right"><?php echo $count["comment"]?></span> コメント</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-success pull-right">812</span> アクセス</a>
+                    <a href="#"><span class="badge badge-success pull-right"><?php echo $count["access"];?></span> アクセス</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-info pull-right">27</span> リクエスト</a>
+                    <a href="#"><span class="badge badge-info pull-right"><?php echo $count["ts"];?></span> リクエスト</a>
                 </li>
                 <li>
-                    <a href="#"><span class="badge badge-info pull-right">11</span> メッセージ</a>
-                </li>
-                <li>
-                    <a href="#"><span class="badge badge-important pull-right">83</span> エラー</a>
-                </li>
-                <li>
-                    <a href="#"><span class="badge badge-warning pull-right">4,231</span> ログ</a>
+                    <a href="#"><span class="badge badge-info pull-right"><?php echo $count["about"];?></span> メッセージ</a>
                 </li>
             </ul>
         </div>
@@ -180,50 +174,12 @@
         </div>
 
         <div class="row-fluid">
-            <!-- block -->
-            <div class="block">
-                <div class="navbar navbar-inner block-header">
-                    <div class="muted pull-left">Statistics</div>
-                    <div class="pull-right"><span class="badge badge-warning">View More</span>
-
-                    </div>
-                </div>
-                <div class="block-content collapse in">
-                    <div class="span3">
-                        <div class="chart" data-percent="73">73%</div>
-                        <div class="chart-bottom-heading"><span class="label label-info">Visitors</span>
-
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div class="chart" data-percent="53">53%</div>
-                        <div class="chart-bottom-heading"><span class="label label-info">Page Views</span>
-
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div class="chart" data-percent="83">83%</div>
-                        <div class="chart-bottom-heading"><span class="label label-info">Users</span>
-
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <div class="chart" data-percent="13">13%</div>
-                        <div class="chart-bottom-heading"><span class="label label-info">Orders</span>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /block -->
-        </div>
-        <div class="row-fluid">
             <div class="span6">
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">アクセス</div>
-                        <div class="pull-right"><span class="badge badge-info">1,234</span>
+                        <div class="pull-right"><span class="badge badge-info"><?php echo $count["access"];?></span>
 
                         </div>
                     </div>
@@ -236,18 +192,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>192.168.1.1</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>192.168.1.2</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>192.168.1.3</td>
-                                    <td>@gabrielva</td>
-                                </tr>
+                                <?php foreach($access as $val):?>
+                                    <tr>
+                                        <td><?php echo $val["ip"];?></td>
+                                        <td><?php echo $val["name"];?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>
@@ -259,7 +209,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">コメント</div>
-                        <div class="pull-right"><span class="badge badge-info">17</span>
+                        <div class="pull-right"><span class="badge badge-info"><?php echo $count["comment"];?></span>
 
                         </div>
                     </div>
@@ -267,31 +217,21 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Username</th>
+                                    <th>name</th>
                                     <th>email</th>
                                     <th>website</th>
                                     <th>body</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>@mdo</td>
-                                    <td>mdo@gmail.com</td>
-                                    <td>http://mdo.jp</td>
-                                    <td>hogehoge</td>
-                                </tr>
-                                <tr>
-                                    <td>@fat</td>
-                                    <td>fat@gmail.com</td>
-                                    <td>http://fat.jp</td>
-                                    <td>hogehogehoge</td>
-                                </tr>
-                                <tr>
-                                    <td>@gabrielva</td>
-                                    <td>gabriel@gmail.com</td>
-                                    <td>http://gabriel.jp</td>
-                                    <td>hogehogehogehoge</td>
-                                </tr>
+                                <?php foreach($comment as $val):?>
+                                    <tr>
+                                        <td><?php echo $val["name"];?></td>
+                                        <td><?php echo $val["mail"];?></td>
+                                        <td><?php echo $val["site"];?></td>
+                                        <td><?php echo $val["body"];?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>
@@ -305,7 +245,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">リクエスト</div>
-                        <div class="pull-right"><span class="badge badge-info">752</span>
+                        <div class="pull-right"><span class="badge badge-info"><?php echo $count["ts"];?></span>
 
                         </div>
                     </div>
@@ -313,31 +253,21 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Product</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
+                                    <th>name</th>
+                                    <th>mail</th>
+                                    <th>body</th>
+                                    <th>date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Coat</td>
-                                    <td>02/02/2013</td>
-                                    <td>$25.12</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacket</td>
-                                    <td>01/02/2013</td>
-                                    <td>$335.00</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Shoes</td>
-                                    <td>01/02/2013</td>
-                                    <td>$29.99</td>
-                                </tr>
+                                <?php foreach($ts as $val):?>
+                                    <tr>
+                                        <td><?php echo $val["name"];?></td>
+                                        <td><?php echo $val["mail"];?></td>
+                                        <td><?php echo $val["body"];?></td>
+                                        <td><?php echo $val["created_at"];?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>
@@ -349,7 +279,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div class="muted pull-left">メッセージ</div>
-                        <div class="pull-right"><span class="badge badge-info">812</span>
+                        <div class="pull-right"><span class="badge badge-info"><?php echo $count["about"];?></span>
 
                         </div>
                     </div>
@@ -357,27 +287,21 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
+                                    <th>name</th>
+                                    <th>mail</th>
+                                    <th>body</th>
+                                    <th>date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>02/02/2013</td>
-                                    <td>$25.12</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>01/02/2013</td>
-                                    <td>$335.00</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>01/02/2013</td>
-                                    <td>$29.99</td>
-                                </tr>
+                                <?php foreach($about as $val):?>
+                                    <tr>
+                                        <td><?php echo $val["name"];?></td>
+                                        <td><?php echo $val["mail"];?></td>
+                                        <td><?php echo $val["body"];?></td>
+                                        <td><?php echo $val["created_at"];?></td>
+                                    </tr>
+                                <?php endforeach;?>
                             </tbody>
                         </table>
                     </div>

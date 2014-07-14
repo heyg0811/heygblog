@@ -78,6 +78,7 @@ class Controller_Blog extends Controller_Template
                 Input::post("email",null),
                 Input::post("url",null),
                 Input::post("body",null));
+        Model_User::insertUser($_SERVER["REMOTE_ADDR"],Input::post("name",null));
         return Response::redirect('blog/index');
     }
 }

@@ -36,6 +36,15 @@ class Model_Comment extends \Orm\Model
 		return $result;
 	}
 
+	public static function getCom(){
+		$result = DB::select("*")
+					->from("comments")
+					->where("admin","=","0")
+					->execute()
+					->as_array();
+		return $result;
+	}
+
 	public static function getComId($id){
 		$result = DB::select("*")
 					->from("comments")

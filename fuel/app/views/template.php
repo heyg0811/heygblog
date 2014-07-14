@@ -161,7 +161,7 @@
                                 <span class="caption">こめんと</span>
                             </div>
                             <div class="line">
-                                <span class="counter"><?php echo Model_Counter::countAccess();?></span>
+                                <span class="counter"><?php echo count(Model_Counter::countAccess());?></span>
                                 <span class="caption">あくせす</span>
                             </div>
                         </div>

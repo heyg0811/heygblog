@@ -100,6 +100,16 @@ class Controller_Admin extends Controller_Template
 	{
 		$this->template->title = 'あどみん';
 		$this->template->content = View::forge('admin/index');
+		$this->template->content->count = array(
+				"access" => Model_Counter::count(),
+				"comment" => Model_Comment::count(),
+				"ts" => Model_Message::countTs(),
+				"about" => Model_Message::countAbout(),
+			);
+		$this->template->content->access = Model_Counter::getAccess();
+		$this->template->content->comment = Model_Comment::getCom();
+		$this->template->content->ts = Model_Message::getRequest("ts");
+		$this->template->content->about = Model_Message::getRequest("about");
 	}
 
 	private function validate_login()

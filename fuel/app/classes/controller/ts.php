@@ -66,6 +66,7 @@ class Controller_Ts extends Controller_Template
 		catch (\EmailSendingFailedException $e) {
 			$err_msg = '送信に失敗しました。';
 		}
+		Model_User::insertUser($_SERVER["REMOTE_ADDR"],Input::post("name",null));
 		return Response::redirect('ts/');
 	}
 }
