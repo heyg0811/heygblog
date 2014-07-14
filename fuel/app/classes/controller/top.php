@@ -32,8 +32,7 @@ class Controller_Top extends Controller_Template
 	{
 		$this->template->title = 'とっぷ';
 		$this->template->content = View::forge('top/index');
-		$count = Model_Article::countRow();
-		$this->template->content->count = $count;
+		$this->template->content->count = Model_Article::countRow();
 		$this->template->content->article = Model_Article::getPage(1);
 
 		Model_Counter::insertAddress("top");
