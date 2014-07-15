@@ -21,7 +21,7 @@
                 </span>
             </div>
         </header>
-        <div class='body'><?php echo mb_substr($article[$i]['body'],0,80,"utf-8");?></div>
+        <div class='body'><?php echo $article[$i]['digest'];?></div>
     </article>
     <?php endfor;?>
         </aside>

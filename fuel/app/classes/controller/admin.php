@@ -112,6 +112,23 @@ class Controller_Admin extends Controller_Template
 		$this->template->content->about = Model_Message::getRequest("about");
 	}
 
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_addarticle()
+	{
+		$this->template->title = 'きじついか';
+		$this->template->content = View::forge('admin/addarticle');
+		$this->template->content->count = array(
+				"access" => Model_Counter::count(),
+				"comment" => Model_Comment::count(),
+				"ts" => Model_Message::countTs(),
+				"about" => Model_Message::countAbout(),
+			);
+	}
+
 	private function validate_login()
 	{
 		// 入力チェック

@@ -21,6 +21,8 @@
   <?php echo Asset::js('admintheme/morris.min.js');?>
   <?php echo Asset::js('admintheme/bootstrap.min.js');?>
   <?php echo Asset::js('admintheme/jquery.easy-pie-chart.js');?>
+  <?php echo Asset::js('admintheme/ckeditor/ckeditor.js');?>
+  <?php echo Asset::js('admintheme/ckeditor/adapters/jquery.js');?>
   <?php echo Asset::js('admin-original.js');?>
 </body>
 </html>
