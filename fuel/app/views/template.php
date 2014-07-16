@@ -40,7 +40,7 @@
             <div class="widewrapper masthead">
                 <div class="container">
                     <a href="/" id="logo">
-                        <?php echo Asset::img('logo.png');?>
+                        <?php echo Asset::img('logo.png',array('class'=>'img-responsive'));?>
                     </a>
 
                     <div id="mobile-nav-toggle" class="pull-right">
@@ -99,7 +99,7 @@
                             </header>
                             <div class="body">
                                 <ul class="heyg-list">
-                                    <li>ついにリリースできました。</li>
+                                    <li><a href="/blog?id=1">ついにリリースできました。</a></li>
                                 </ul>
                             </div>
                         </div>
