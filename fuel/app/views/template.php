@@ -126,8 +126,8 @@
                         <div class="body clearfix">
                             <ul class="tags">
                                 <?php foreach($result as $val):?>
-                                    <?php if(strpos($val['tag'],',')):?>
-                                        <?php $tempTag = explode(",",$val['tag']);?>
+                                    <?php if(strpos($val['tag'],' ')):?>
+                                        <?php $tempTag = explode(" ",$val['tag']);?>
                                         <?php foreach($tempTag as $tagVal):?>
                                             <li><a href=<?php echo "/util/tag?tag=".$tagVal;?>><?php echo $tagVal?></a></li>
                                         <?php endforeach;?>

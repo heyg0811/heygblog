@@ -69,7 +69,7 @@ class Model_Article extends \Orm\Model
 	public static function searchTag($tag){
 		$result = DB::select("*")
 		->from("articles")
-		->where("tag","like",$tag)
+		->where("tag","like","%".$tag."%")
 		->execute()
 		->as_array();
 		return $result;
