@@ -70,6 +70,14 @@ class Model_Counter extends \Orm\Model
 		}
 	}
 
+	public static function countAccess(){
+		$result = DB::select(DB::expr("distinct(ip) AS ip,DATE_FORMAT(from_unixtime(created_at),'%Y%m%d') AS date"))
+		->from("counters")
+		->execute()
+		->as_array();
+		return count($result);
+	}
+
 	public static function getAccess(){
 		$result = DB::select(DB::expr("distinct(counters.ip) AS ip,DATE_FORMAT(from_unixtime(counters.created_at),'%Y%m%d') AS date,users.name"))
 		->from("counters")

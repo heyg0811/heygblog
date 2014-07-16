@@ -101,7 +101,7 @@ class Controller_Admin extends Controller_Template
 		$this->template->title = 'あどみん';
 		$this->template->content = View::forge('admin/index');
 		$this->template->content->count = array(
-				"access" => Model_Counter::count(),
+				"access" => Model_Counter::countAccess(),
 				"comment" => Model_Comment::count(),
 				"ts" => Model_Message::countTs(),
 				"about" => Model_Message::countAbout(),
