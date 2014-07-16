@@ -69,125 +69,136 @@
                     <div class="heyg-breadcrumb">
                         <a href="/">Top</a>
                         <?php if(!empty($breadcrumb)): ?>
-                            <?php foreach ($breadcrumb as $val): ?>
-                                <span class="separator">&#x2F;</span>
-                                <a href="<?php echo $val["url"] ?>"><?php echo $val["name"]; ?></a>
-                            <?php endforeach; ?>
-                        <?php endif?>
-                    </div>
-
-                    <div class="heyg-searchbox">
-                        <form action="/util/search" method="post" accept-charset="utf-8">
-                            <button class="searchbutton" type="submit">
-                                <i class="icon-search"></i>
-                            </button>
-                            <input class="searchfield" name="sword" id="searchbox" type="text" value="" placeholder="記事検索">
-                        </form>
-                    </div>
-                </div>
+                        <?php foreach ($breadcrumb as $val): ?>
+                        <span class="separator">&#x2F;</span>
+                        <a href="<?php echo $val["url"] ?>"><?php echo $val["name"]; ?></a>
+                    <?php endforeach; ?>
+                <?php endif?>
             </div>
-        </header>
 
-        <div class="widewrapper main">
-            <div class="container">
-                <div class="row">
-                    <?php echo $content;?>
-                    <aside class="col-md-4 blog-aside">
-                        <div class="aside-widget">
-                            <header>
-                                <h3>おしらせ</h3>
-                            </header>
-                            <div class="body">
-                                <ul class="heyg-list">
-                                    <li><a href="/blog?id=1">ついにリリースできました。</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="aside-widget">
-                            <header>
-                                <h3>おすすめきじ</h3>
-                            </header>
-                            <div class="body">
-                                <ul class="heyg-list">
-                                    <?php $popArt = Model_Counter::getPop();?>
-                                    <?php foreach($popArt as $val):?>
-                                    <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
-                                <?php endforeach;?>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="aside-widget">
-                        <header>
-                            <h3>たぐ</h3>
-                        </header>
-                        <?php $result = Model_Article::getTag();?>
-                        <div class="body clearfix">
-                            <ul class="tags">
-                                <?php foreach($result as $val):?>
-                                    <?php if(strpos($val['tag'],' ')):?>
-                                        <?php $tempTag = explode(" ",$val['tag']);?>
-                                        <?php foreach($tempTag as $tagVal):?>
-                                            <li><a href=<?php echo "/util/tag?tag=".$tagVal;?>><?php echo $tagVal?></a></li>
-                                        <?php endforeach;?>
-                                    <?php else:?>
-                                        <li><a href=<?php echo "/util/tag?tag=".$val['tag'];?>><?php echo $val['tag']?></a></li>
-                                    <?php endif;?>
-                                <?php endforeach;?>
-                            </ul>
-                        </div>
-                    </div>
-                </aside>
+            <div class="heyg-searchbox">
+                <form action="/util/search" method="post" accept-charset="utf-8">
+                    <button class="searchbutton" type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input class="searchfield" name="sword" id="searchbox" type="text" value="" placeholder="記事検索">
+                </form>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="widewrapper footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-widget">
-                        <h3> <i class="icon-cog"></i>かうんた</h3>
+</header>
 
-                        <span></span>
-
-                        <div class="stats">
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Article::count();?></span>
-                                <span class="caption">きじ</span>
-                            </div>
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Comment::count();?></span>
-                                <span class="caption">こめんと</span>
-                            </div>
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Counter::countAccess();?></span>
-                                <span class="caption">あくせす</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 footer-widget">
-                        <h3> <i class="icon-star"></i>にんきじじ</h3>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <?php echo $content;?>
+            <aside class="col-md-4 blog-aside">
+                <div class="aside-widget">
+                    <header>
+                        <h3>おしらせ</h3>
+                    </header>
+                    <div class="body">
                         <ul class="heyg-list">
-                        <?php foreach($popArt as $val):?>
+                            <li><a href="/blog?id=1">ついにリリースできました。</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="aside-widget">
+                    <header>
+                        <h3>おすすめきじ</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="heyg-list">
+                            <?php $popArt = Model_Counter::getPop();?>
+                            <?php foreach($popArt as $val):?>
                             <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
                         <?php endforeach;?>
                     </ul>
                 </div>
+            </div>
 
+            <div class="aside-widget">
+                <header>
+                    <h3>たぐ</h3>
+                </header>
+                <?php $result = Model_Article::getTag();?>
+                <div class="body clearfix">
+                    <ul class="tags">
+                        <?php foreach($result as $val):?>
+                        <?php if(strpos($val['tag'],' ')):?>
+                        <?php $tempTag = explode(" ",$val['tag']);?>
+                        <?php foreach($tempTag as $tagVal):?>
+                        <li><a href=<?php echo "/util/tag?tag=".$tagVal;?>><?php echo $tagVal?></a></li>
+                    <?php endforeach;?>
+                <?php else:?>
+                <li><a href=<?php echo "/util/tag?tag=".$val['tag'];?>><?php echo $val['tag']?></a></li>
+            <?php endif;?>
+        <?php endforeach;?>
+    </ul>
+</div>
+</div>
+<div class="aside-widget">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- top -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:336px;height:280px"
+    data-ad-client="ca-pub-8972128233832989"
+    data-ad-slot="7406164155"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-4 footer-widget">
-                    <h3> <i class="icon-cog"></i>こんたくと</h3>
+                    <h3> <i class="icon-cog"></i>かうんた</h3>
 
                     <span></span>
 
-                    <span class="email">
-                        <a href="/about/">heyg.pw@gmail.com</a>
-                    </span>
+                    <div class="stats">
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Article::count();?></span>
+                            <span class="caption">きじ</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Comment::count();?></span>
+                            <span class="caption">こめんと</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Counter::countAccess();?></span>
+                            <span class="caption">あくせす</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="icon-star"></i>にんきじじ</h3>
+                    <ul class="heyg-list">
+                        <?php foreach($popArt as $val):?>
+                        <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+
+            <div class="col-md-4 footer-widget">
+                <h3> <i class="icon-cog"></i>こんたくと</h3>
+
+                <span></span>
+
+                <span class="email">
+                    <a href="/about/">heyg.pw@gmail.com</a>
+                </span>
             </div>
         </div>
     </div>
+</div>
 </footer>
 
 <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
@@ -200,21 +211,21 @@
 <?php echo Asset::js('validationengine/validationEngine.js');?>
 <?php echo Asset::js('original.js');?>
 <script type="text/javascript">
-    SyntaxHighlighter.autoloader(
-         <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
-        ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
-        ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
-        ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
-        ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
-        ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
-        ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
-        ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
-        ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
-        ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
-        ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
-        ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
-    );
-    SyntaxHighlighter.all();
+SyntaxHighlighter.autoloader(
+   <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
+   ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
+   ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
+   ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
+   ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
+   ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
+   ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
+   ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
+   ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
+   ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
+   ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
+   ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
+   );
+SyntaxHighlighter.all();
 </script>
 
 </body>
