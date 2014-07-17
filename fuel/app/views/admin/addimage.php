@@ -95,12 +95,12 @@
             </div>
           </div>
           <div class="block-content collapse in">
-            <?php for($i=0;$i<count($image)/4;$i++):?>
+            <?php for($i=0;$i<=count($image)/4;$i++):?>
             <div class="row-fluid padd-bottom">
-              <?php for ($j=0; $j<(count($image)-($i*4))&&$j<4; $j++):?>
+              <?php for ($j=0;($j+4*$i)<count($image)&&$j<4; $j++):?>
               <div class="span3">
-                <a href="#" class="thumbnail">
-                  <?php echo Asset::img($image[$i*$j]["type"]."/".$image[$i*$j]["name"],array('class'=>'img-responsive'));?>
+                <a href=<?php echo Uri::base()."assets/img/".$image[$j+4*$i]["type"]."/".$image[$j+4*$i]["name"];?> data-lightbox="gallery" data-title=<?php echo $image[$j+4*$i]["name"];?> class="thumbnail">
+                  <?php echo Asset::img($image[$j+4*$i]["type"]."/".$image[$j+4*$i]["name"],array('class'=>'img-responsive'));?>
                 </a>
               </div>
             <?php endfor ?>
