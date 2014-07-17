@@ -157,6 +157,7 @@ class Controller_Admin extends Controller_Template
 	 */
 	public function action_addimage()
 	{
+		var_dump(DOCROOT);
 		$this->template->title = 'がぞうついか';
 		$this->template->content = View::forge('admin/addimage');
 		$this->template->content->count = array(
