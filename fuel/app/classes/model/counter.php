@@ -109,6 +109,7 @@ class Model_Counter extends \Orm\Model
 			->where("created_at",">=",$date)
 			->group_by("date")
 			->order_by("created_at","desc")
+			->limit(31)
 			->execute()
 			->as_array();
 			return $result;
@@ -121,6 +122,7 @@ class Model_Counter extends \Orm\Model
 			->where("created_at",">=",$date)
 			->group_by("date")
 			->order_by("created_at","desc")
+			->limit(12)
 			->execute()
 			->as_array();
 			return $result;
@@ -137,6 +139,7 @@ class Model_Counter extends \Orm\Model
 				->on("t1.date","=","t2.idate")
 				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
 				->on("t1.date","=","t3.adate")
+				->limit(7)
 				->execute()
 				->as_array();
 			return $result;
@@ -151,6 +154,7 @@ class Model_Counter extends \Orm\Model
 				->on("t1.date","=","t2.idate")
 				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
 				->on("t1.date","=","t3.adate")
+				->limit(31)
 				->execute()
 				->as_array();
 			return $result;
@@ -165,6 +169,7 @@ class Model_Counter extends \Orm\Model
 				->on("t1.date","=","t2.idate")
 				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
 				->on("t1.date","=","t3.adate")
+				->limit(12)
 				->execute()
 				->as_array();
 			return $result;
