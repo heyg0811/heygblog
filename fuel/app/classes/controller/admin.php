@@ -51,12 +51,6 @@ class Controller_Admin extends Controller_Template
 		if (in_array($method, $nologin_methods) && Auth::check()) {
 			Response::redirect('admin/index');
 		}
-		// CSRFチェック
-		if (Input::method() === 'POST') {
-			if (!Security::check_token()) {
-				Response::redirect('admin/timeout');
-			}
-		}
 	}
 
 
