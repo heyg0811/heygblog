@@ -138,19 +138,22 @@ class Model_Article extends \Orm\Model
 		return $result;
 	}
 
-	public static function search($word){
-		$result = DB::select()
-		->from('articles')
-		->where('article_id','=',1)
-		->execute()
-		->as_array();
-		var_dump('title:'.$result[0]['title'].' word:'.$word);
-		stripos($result[0]['title'],$word);
-		// foreach($result as $val){
-		// 	if(stripos($val['title'],$word) || stripos($val['body'],$word)){
-		// 		var_dump($val['article_id']);exit;
-		// 		return $val['article_id'];
-		// 	}
-		return $result;
+	public static function addArticle($title,$name,$tag,$category,$digest,$body){
+		$table = "articles";
+		$columns = array("title","name","tag","category","digest","body","created_at","updated_at");
+		$values = array(
+			"title" => $title,
+			"name" => $name,
+			"tag" => $tag,
+			"category" => $category,
+			"digest" => $digest,
+			"body" => $body,
+			"created_at" => time(),
+			"updated_at" => time(),
+			);
+		DB::insert($table)
+		->columns($columns)
+		->values($values)
+		->execute();
 	}
 }

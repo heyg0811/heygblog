@@ -65,7 +65,7 @@
           <div class="navbar navbar-inner block-header">
             <div class="muted pull-left">Editor</div>
           </div>
-          <form class="form" style="margin-top:10px;">
+          <form action="addedarticle" method="post" class="form" style="margin-top:10px;">
             <div style="margin-left:15px;">
               <label class="control-label">Title</label>
               <div class="controls">
@@ -79,6 +79,12 @@
               <div class="controls">
                 <input type="text" placeholder="tag" name="tag" style="width:95%;">
               </div>
+              <label>Category</label>
+              <select name="category">
+                <option value="work">work</option>
+                <option value="real">real</option>
+                <option value="game">game</option>
+              </select>
               <label class="control-label">Digest</label>
               <div class="controls">
                 <textarea placeholder="digest" name="digest" id="" cols="30" rows="5" style="width:95%;"></textarea>
@@ -88,7 +94,7 @@
               <label class="control-label">Body</label>
               <textarea id="ckeditor_full" name="body"></textarea>
             </div>
-              <button style="margin-left:15px;" type="submit" class="btn btn-large">送信</button>
+            <button style="margin-left:15px;" type="submit" class="btn btn-large">送信</button>
           </form>
         </div>
         <!-- /block -->

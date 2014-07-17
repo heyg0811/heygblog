@@ -147,6 +147,25 @@ class Controller_Admin extends Controller_Template
 	 * @access  public
 	 * @return  Response
 	 */
+	public function action_addedarticle()
+	{
+		Model_Article::addArticle(
+			Input::post("title",null),
+			Input::post("name",null),
+			Input::post("tag",null),
+			Input::post("category",null),
+			Input::post("digest",null),
+			htmlspecialchars(Input::post("body",null), ENT_QUOTES)
+			);
+		Response::redirect('admin/index');
+	}
+
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_addimage()
 	{
 		$this->template->title = 'がぞうついか';
