@@ -157,7 +157,6 @@ class Controller_Admin extends Controller_Template
 	 */
 	public function action_addimage()
 	{
-		var_dump(DOCROOT);
 		$this->template->title = 'がぞうついか';
 		$this->template->content = View::forge('admin/addimage');
 		$this->template->content->count = array(
@@ -181,7 +180,7 @@ class Controller_Admin extends Controller_Template
 			case "article":
 			// 初期設定
 			$config = array(
-				'path' => DOCROOT.'assets/img/article/',
+				'path' => Uri::base().'assets/img/article/',
 				'auto_rename' => true,
 				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('png'),
@@ -191,7 +190,7 @@ class Controller_Admin extends Controller_Template
 			case "blog":
 			// 初期設定
 			$config = array(
-				'path' => DOCROOT.'assets/img/blog/',
+				'path' => Uri::base().'assets/img/blog/',
 				'auto_rename' => true,
 				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('gif'),
