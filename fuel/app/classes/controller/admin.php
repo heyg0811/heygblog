@@ -129,7 +129,7 @@ class Controller_Admin extends Controller_Template
 		$this->template->title = 'きじついか';
 		$this->template->content = View::forge('admin/addarticle');
 		$this->template->content->count = array(
-			"access" => Model_Counter::count(),
+			"access" => Model_Counter::countAccess(),
 			"comment" => Model_Comment::count(),
 			"ts" => Model_Message::countTs(),
 			"about" => Model_Message::countAbout(),
@@ -166,7 +166,7 @@ class Controller_Admin extends Controller_Template
 		$this->template->title = 'がぞうついか';
 		$this->template->content = View::forge('admin/addimage');
 		$this->template->content->count = array(
-			"access" => Model_Counter::count(),
+			"access" => Model_Counter::countAccess(),
 			"comment" => Model_Comment::count(),
 			"ts" => Model_Message::countTs(),
 			"about" => Model_Message::countAbout(),
@@ -219,7 +219,7 @@ class Controller_Admin extends Controller_Template
 			$this->template->title = 'がぞうついか';
 			$this->template->content = View::forge('admin/addimage');
 			$this->template->content->count = array(
-				"access" => Model_Counter::count(),
+				"access" => Model_Counter::countAccess(),
 				"comment" => Model_Comment::count(),
 				"ts" => Model_Message::countTs(),
 				"about" => Model_Message::countAbout(),
