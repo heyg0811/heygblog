@@ -36,10 +36,10 @@ class Controller_Admin extends Controller_Template
 		}
 		// ログインチェック
 		$auth_methods = array(
-			'logined',
 			'logout',
 			'index',
-			'stats',
+			'addarticle',
+			'imgupload',
 			);
 		if (in_array($method, $auth_methods) && !Auth::check()) {
 			Response::redirect('admin/login');
@@ -51,12 +51,12 @@ class Controller_Admin extends Controller_Template
 		if (in_array($method, $nologin_methods) && Auth::check()) {
 			Response::redirect('admin/index');
 		}
-		// CSRFチェック
-		if (Input::method() === 'POST') {
-			if (!Security::check_token()) {
-				Response::redirect('admin/timeout');
-			}
-		}
+		// // CSRFチェック
+		// if (Input::method() === 'POST') {
+		// 	if (!Security::check_token()) {
+		// 		Response::redirect('admin/timeout');
+		// 	}
+		// }
 	}
 
 
@@ -96,20 +96,33 @@ class Controller_Admin extends Controller_Template
 	 * @access  public
 	 * @return  Response
 	 */
+	public function action_logout() {
+        // ログアウト処理
+		Auth::logout();
+		Response::redirect('/');
+	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
 	public function action_index()
 	{
 		$this->template->title = 'あどみん';
 		$this->template->content = View::forge('admin/index');
 		$this->template->content->count = array(
-				"access" => Model_Counter::countAccess(),
-				"comment" => Model_Comment::count(),
-				"ts" => Model_Message::countTs(),
-				"about" => Model_Message::countAbout(),
+			"access" => Model_Counter::countAccess(),
+			"comment" => Model_Comment::count(),
+			"ts" => Model_Message::countTs(),
+			"about" => Model_Message::countAbout(),
+			"image" => Model_Image::count(),
 			);
 		$this->template->content->access = Model_Counter::getAccess();
 		$this->template->content->comment = Model_Comment::getCom();
 		$this->template->content->ts = Model_Message::getRequest("ts");
 		$this->template->content->about = Model_Message::getRequest("about");
+		$this->template->content->image = Model_Image::getAll();
 	}
 
 	/**
@@ -122,25 +135,98 @@ class Controller_Admin extends Controller_Template
 		$this->template->title = 'きじついか';
 		$this->template->content = View::forge('admin/addarticle');
 		$this->template->content->count = array(
+			"access" => Model_Counter::count(),
+			"comment" => Model_Comment::count(),
+			"ts" => Model_Message::countTs(),
+			"about" => Model_Message::countAbout(),
+			);
+	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_addimage()
+	{
+		$this->template->title = 'がぞうついか';
+		$this->template->content = View::forge('admin/addimage');
+		$this->template->content->count = array(
+			"access" => Model_Counter::count(),
+			"comment" => Model_Comment::count(),
+			"ts" => Model_Message::countTs(),
+			"about" => Model_Message::countAbout(),
+			"image" => Model_Image::count(),
+			);
+		$this->template->content->image = Model_Image::getAll();
+		$this->template->content->set_safe("errmsg","");
+	}
+	/**
+	 *
+	 * @access  public
+	 * @return  Response
+	 */
+	public function action_imgupload()
+	{
+		switch(Input::post("type",null)){
+			case "article":
+			// 初期設定
+			$config = array(
+				'path' => DOCROOT.'assets/img/article/',
+				'auto_rename' => true,
+				'new_name' => Input::post("name",null),
+				'ext_whitelist' => array('png'),
+				);
+			break;
+
+			case "blog":
+			// 初期設定
+			$config = array(
+				'path' => DOCROOT.'assets/img/blog/',
+				'auto_rename' => true,
+				'new_name' => Input::post("name",null),
+				'ext_whitelist' => array('gif'),
+				);
+			break;
+		}
+
+        // cofigを適用
+		Upload::process($config);
+
+		// 指定された型かチェック
+		if (Upload::is_valid()) {
+			// アップロード確定
+			Upload::save();
+			if($file = Upload::get_files(0)){
+				Model_Image::addImage($file["name"],Input::post("type",null));
+			}
+			return Response::redirect("/admin/");
+		}else{
+			$this->template->title = 'がぞうついか';
+			$this->template->content = View::forge('admin/addimage');
+			$this->template->content->count = array(
 				"access" => Model_Counter::count(),
 				"comment" => Model_Comment::count(),
 				"ts" => Model_Message::countTs(),
 				"about" => Model_Message::countAbout(),
-			);
+				);
+			$this->template->content->set_safe('errmsg', "ファイルアップロードに失敗しました");
+		}
 	}
+
 
 	private function validate_login()
 	{
 		// 入力チェック
 		$validation = Validation::forge();
 		$validation->add('username', 'ユーザー名')
-			->add_rule('required')
-			->add_rule('min_length', 4)
-			->add_rule('max_length', 15);
+		->add_rule('required')
+		->add_rule('min_length', 4)
+		->add_rule('max_length', 15);
 		$validation->add('password', 'パスワード')
-			->add_rule('required')
-			->add_rule('min_length', 6)
-			->add_rule('max_length', 20);
+		->add_rule('required')
+		->add_rule('min_length', 6)
+		->add_rule('max_length', 20);
 		$validation->run();
 		return $validation;
 	}

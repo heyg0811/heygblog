@@ -38,10 +38,10 @@
         <li>
           <a href="index"><i class="icon-chevron-right"></i> Dashboard</a>
         </li>
-        <li class="active">
+        <li>
           <a href="addarticle"><i class="icon-chevron-right"></i> Add article</a>
         </li>
-        <li>
+        <li class="active">
           <a href="addimage"><i class="icon-chevron-right"></i> Add image</a>
         </li>
         <li>
@@ -63,36 +63,53 @@
         <!-- block -->
         <div class="block">
           <div class="navbar navbar-inner block-header">
-            <div class="muted pull-left">Editor</div>
+            <div class="muted pull-left">Image Add</div>
           </div>
-          <form class="form" style="margin-top:10px;">
+          <p class="text-error"><?php echo $errmsg;?></p>
+          <form enctype="multipart/form-data" class="form" style="margin-top:10px;" action="imgupload" method="post">
             <div style="margin-left:15px;">
-              <label class="control-label">Title</label>
-              <div class="controls">
-                <input type="text" placeholder="title" name="title" style="width:95%;">
-              </div>
-              <label class="control-label">Name</label>
-              <div class="controls">
-                <input type="text" placeholder="name" name="name" style="width:95%;">
-              </div>
-              <label class="control-label">Tag</label>
-              <div class="controls">
-                <input type="text" placeholder="tag" name="tag" style="width:95%;">
-              </div>
-              <label class="control-label">Digest</label>
-              <div class="controls">
-                <textarea placeholder="digest" name="digest" id="" cols="30" rows="5" style="width:95%;"></textarea>
-              </div>
+              <fieldset>
+                <label>Name</label>
+                <input type="text" name="name" placeholder="File name">
+                <label>Type</label>
+                <select name="type">
+                  <option value="blog">blog</option>
+                  <option value="article">article</option>
+                </select>
+                <label>File</label>
+                <input type="file" name="upload_file">
+              </fieldset>
             </div>
-            <div class="block-content collapse in">
-              <label class="control-label">Body</label>
-              <textarea id="ckeditor_full" name="body"></textarea>
-            </div>
-              <button style="margin-left:15px;" type="submit" class="btn btn-large">送信</button>
+            <button style="margin-left:15px; margin-top:10px" type="submit" class="btn">送信</button>
+            <input type="hidden" name="<?php echo \Config::get('security.csrf_token_key');?>" value="<?php echo \Security::fetch_token();?>" />
           </form>
         </div>
         <!-- /block -->
       </div>
+      <div class="row-fluid">
+        <!-- block -->
+        <div class="block">
+          <div class="navbar navbar-inner block-header">
+            <div class="muted pull-left">Image Gallery</div>
+            <div class="pull-right"><span class="badge badge-info"><?php echo $count["image"];?></span>
+            </div>
+          </div>
+          <div class="block-content collapse in">
+            <?php for($i=0;$i<count($image)/4;$i++):?>
+            <div class="row-fluid padd-bottom">
+              <?php for ($j=0; $j<(count($image)-($i*4))&&$j<4; $j++):?>
+              <div class="span3">
+                <a href="#" class="thumbnail">
+                  <?php echo Asset::img($image[$i*$j]["type"]."/".$image[$i*$j]["name"],array('class'=>'img-responsive'));?>
+                </a>
+              </div>
+            <?php endfor ?>
+          </div>
+        <?php endfor;?>
+      </div>
     </div>
+    <!-- /block -->
   </div>
+</div>
+</div>
 </div>

@@ -12,6 +12,8 @@
   <?php echo Asset::css('admintheme/styles.css');?>
   <?php echo Asset::css('admintheme/morris.css') ?>
   <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
+  <!-- lightBox -->
+  <?php echo Asset::css('lightbox/lightbox.css');?>
 </head>
 <body>
   <?php echo $content?>
@@ -23,6 +25,7 @@
   <?php echo Asset::js('admintheme/jquery.easy-pie-chart.js');?>
   <?php echo Asset::js('admintheme/ckeditor/ckeditor.js');?>
   <?php echo Asset::js('admintheme/ckeditor/adapters/jquery.js');?>
+  <?php echo Asset::js('lightbox/lightbox.min.js');?>
   <?php echo Asset::js('admin-original.js');?>
 </body>
 </html>
