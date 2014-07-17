@@ -70,10 +70,10 @@
         <div class="navbar navbar-inner block-header">
           <div class="muted pull-left"><small>デバイス別アクセス</small></div>
           <div class="pull-right" id="sb">
-            <span class="badge badge-warning" data-filter="d">日</span>
-            <span class="badge badge-warning" data-filter="w">週</span>
-            <span class="badge badge-warning" data-filter="m">月</span>
-            <span class="badge badge-warning" data-filter="y">年</span>
+            <span class="badge badge-warning" style="cursor:pointer" data-filter="d">日</span>
+            <span class="badge badge-warning" style="cursor:pointer" data-filter="w">週</span>
+            <span class="badge badge-warning" style="cursor:pointer" data-filter="m">月</span>
+            <span class="badge badge-warning" style="cursor:pointer" data-filter="y">年</span>
           </div>
         </div>
         <div class="block-content collapse in">
