@@ -26,6 +26,8 @@ class Controller_Admin extends Controller_Template
 
 	public function before() {
 		parent::before();
+        // 初期処理
+		$method = Uri::segment(2);
 		// ログインチェック
 		$auth_methods = array(
 			'logout',
