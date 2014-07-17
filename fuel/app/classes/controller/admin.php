@@ -26,14 +26,6 @@ class Controller_Admin extends Controller_Template
 
 	public function before() {
 		parent::before();
-        // 初期処理
-        // POSTチェック
-		$post_methods = array(
-			);
-		$method = Uri::segment(2);
-		if (Input::method() !== 'POST' && in_array($method, $post_methods)) {
-			Response::redirect('admin/timeout');
-		}
 		// ログインチェック
 		$auth_methods = array(
 			'logout',
