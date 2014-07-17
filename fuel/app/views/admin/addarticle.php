@@ -66,6 +66,7 @@
             <div class="muted pull-left">Editor</div>
           </div>
           <form action="addedarticle" method="post" class="form" style="margin-top:10px;">
+            <input type="hidden" name=<?php echo \Config::get('security.csrf_token_key'); ?> value=<?php echo \Security::fetch_token(); ?> />
             <div style="margin-left:15px;">
               <label class="control-label">Title</label>
               <div class="controls">

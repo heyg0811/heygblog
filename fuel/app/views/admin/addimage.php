@@ -67,6 +67,7 @@
           </div>
           <p class="text-error"><?php echo $errmsg;?></p>
           <form enctype="multipart/form-data" class="form" style="margin-top:10px;" action="imgupload" method="post">
+            <input type="hidden" name=<?php echo \Config::get('security.csrf_token_key'); ?> value=<?php echo \Security::fetch_token(); ?> />
             <div style="margin-left:15px;">
               <fieldset>
                 <label>Name</label>
@@ -81,7 +82,6 @@
               </fieldset>
             </div>
             <button style="margin-left:15px; margin-top:10px" type="submit" class="btn">送信</button>
-            <input type="hidden" name="<?php echo \Config::get('security.csrf_token_key');?>" value="<?php echo \Security::fetch_token();?>" />
           </form>
         </div>
         <!-- /block -->

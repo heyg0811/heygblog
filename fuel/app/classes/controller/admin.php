@@ -51,12 +51,12 @@ class Controller_Admin extends Controller_Template
 		if (in_array($method, $nologin_methods) && Auth::check()) {
 			Response::redirect('admin/index');
 		}
-		// // CSRFチェック
-		// if (Input::method() === 'POST') {
-		// 	if (!Security::check_token()) {
-		// 		Response::redirect('admin/timeout');
-		// 	}
-		// }
+		// CSRFチェック
+		if (Input::method() === 'POST') {
+			if (!Security::check_token()) {
+				Response::redirect('admin/timeout');
+			}
+		}
 	}
 
 
@@ -139,6 +139,7 @@ class Controller_Admin extends Controller_Template
 			"comment" => Model_Comment::count(),
 			"ts" => Model_Message::countTs(),
 			"about" => Model_Message::countAbout(),
+			"image" => Model_Image::count(),
 			);
 	}
 
@@ -228,6 +229,7 @@ class Controller_Admin extends Controller_Template
 				"comment" => Model_Comment::count(),
 				"ts" => Model_Message::countTs(),
 				"about" => Model_Message::countAbout(),
+				"image" => Model_Image::count(),
 				);
 			$this->template->content->set_safe('errmsg', "ファイルアップロードに失敗しました");
 		}
