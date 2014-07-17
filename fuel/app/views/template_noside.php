@@ -8,6 +8,8 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <?php echo html_tag('link',array('rel' => 'icon','type' => 'image/gif','href' => Asset::get_file('favicon.gif', 'img'),)); ?>
+    <?php echo html_tag('link',array('rel' => 'shortcut icon','type' => 'image/gif','href' => Asset::get_file('favicon.gif', 'img'),)); ?>
 
     <!-- Bootstrap styles -->
     <?php echo Asset::css('vendor/bootstrap/bootstrap.css');?>
