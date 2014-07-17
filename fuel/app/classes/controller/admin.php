@@ -45,6 +45,12 @@ class Controller_Admin extends Controller_Template
 		if (in_array($method, $nologin_methods) && Auth::check()) {
 			Response::redirect('admin/index');
 		}
+		// CSRFチェック
+		if (Input::method() === 'POST') {
+			if (!Security::check_token()) {
+				Response::redirect('auth/timeout');
+			}
+		}
 	}
 
 
@@ -157,7 +163,6 @@ class Controller_Admin extends Controller_Template
 	 */
 	public function action_addimage()
 	{
-		var_dump(Uri::base());
 		$this->template->title = 'がぞうついか';
 		$this->template->content = View::forge('admin/addimage');
 		$this->template->content->count = array(
