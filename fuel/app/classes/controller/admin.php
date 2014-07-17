@@ -181,7 +181,7 @@ class Controller_Admin extends Controller_Template
 			case "article":
 			// 初期設定
 			$config = array(
-				'path' => '/var/www/html/public/assets/img/article/',
+				'path' => '/var/www/html/article/',
 				'auto_rename' => true,
 				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('png'),
@@ -191,7 +191,7 @@ class Controller_Admin extends Controller_Template
 			case "blog":
 			// 初期設定
 			$config = array(
-				'path' => '/var/www/html/public/assets/img/article/',
+				'path' => '/var/www/html/blog/',
 				'auto_rename' => true,
 				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('gif'),
