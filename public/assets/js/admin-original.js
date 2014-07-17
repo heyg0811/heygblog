@@ -39,7 +39,6 @@ $(window).load(function(){
       $("#hero-area").children("").remove();
       area_data = [];
       for(var i=0;i<data.length;i++){
-        alert(data[i].date);
         area_data.push({"period":data[i].date, "pc":(data[i].pc_count==null)?0:data[i].pc_count, "ios":(data[i].ios_count==null)?0:data[i].ios_count, "android":(data[i].android_count==null)?0:data[i].android_count});
       }
         // Morris Area Chart
