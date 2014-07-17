@@ -54,7 +54,6 @@ $(window).load(function(){
         });
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
-        alert("eeee");
       }
     });
 
@@ -118,7 +117,6 @@ $(window).load(function(){
         });
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
-        alert("eeee");
       }
     });
   });
