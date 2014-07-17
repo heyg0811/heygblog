@@ -63,26 +63,6 @@
 
     <!--/span-->
     <div class="span9" id="content">
-      <!-- morris graph chart -->
-      <div class="row-fluid section">
-       <!-- block -->
-       <div class="block">
-        <div class="navbar navbar-inner block-header">
-          <div class="muted pull-left"><small>アクセス総数</small></div>
-          <div class="pull-right" id="gb">
-            <span class="badge badge-warning" data-filter="w">週</span>
-            <span class="badge badge-warning" data-filter="m">月</span>
-            <span class="badge badge-warning" data-filter="y">年</span>
-          </div>
-        </div>
-        <div class="block-content collapse in">
-          <div class="span12">
-            <div id="hero-graph" style="height: 230px;"></div>
-          </div>
-        </div>
-      </div>
-      <!-- /block -->
-    </div>
     <!-- morris stacked chart -->
     <div class="row-fluid">
       <!-- block -->
@@ -90,6 +70,7 @@
         <div class="navbar navbar-inner block-header">
           <div class="muted pull-left"><small>デバイス別アクセス</small></div>
           <div class="pull-right" id="sb">
+            <span class="badge badge-warning" data-filter="d">日</span>
             <span class="badge badge-warning" data-filter="w">週</span>
             <span class="badge badge-warning" data-filter="m">月</span>
             <span class="badge badge-warning" data-filter="y">年</span>

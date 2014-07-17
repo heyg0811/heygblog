@@ -132,16 +132,31 @@ class Model_Counter extends \Orm\Model
 
 	public static function countArea($dateFilter){
 		switch($dateFilter){
+			case "d":
+			$temp = time();
+			$y = date("Y",$temp); $m = date("m",$temp); $d = date("d",$temp);
+			$date = mktime(0, 0, 0, $m, $d, $y);
+			$result = DB::select("*")
+			->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d %k:00') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' AND created_at >= ".$date." group by `date` order by created_at desc) AS t1"))
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d %k:00') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
+			->on("t1.date","=","t2.idate")
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d %k:00') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
+			->on("t1.date","=","t3.adate")
+			->limit(24)
+			->execute()
+			->as_array();
+			return $result;
+
 			case "w":
 			$result = DB::select("*")
-				->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' group by `date` order by created_at desc) AS t1"))
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
-				->on("t1.date","=","t2.idate")
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
-				->on("t1.date","=","t3.adate")
-				->limit(7)
-				->execute()
-				->as_array();
+			->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' group by `date` order by created_at desc) AS t1"))
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
+			->on("t1.date","=","t2.idate")
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
+			->on("t1.date","=","t3.adate")
+			->limit(7)
+			->execute()
+			->as_array();
 			return $result;
 
 			case "m":
@@ -149,14 +164,14 @@ class Model_Counter extends \Orm\Model
 			$y = date("Y",$temp); $m = date("m",$temp);
 			$date = mktime(0, 0, 0, $m, 1, $y);
 			$result = DB::select("*")
-				->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' AND created_at >= ".$date." group by `date` order by created_at desc) AS t1"))
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
-				->on("t1.date","=","t2.idate")
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
-				->on("t1.date","=","t3.adate")
-				->limit(31)
-				->execute()
-				->as_array();
+			->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' AND created_at >= ".$date." group by `date` order by created_at desc) AS t1"))
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
+			->on("t1.date","=","t2.idate")
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
+			->on("t1.date","=","t3.adate")
+			->limit(31)
+			->execute()
+			->as_array();
 			return $result;
 
 			case "y":
@@ -164,14 +179,14 @@ class Model_Counter extends \Orm\Model
 			$y = date("Y",$temp);
 			$date = mktime(0, 0, 0, 1, 1, $y);
 			$result = DB::select("*")
-				->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' AND created_at >= ".$date." group by `date` order by created_at desc) AS t1"))
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
-				->on("t1.date","=","t2.idate")
-				->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
-				->on("t1.date","=","t3.adate")
-				->limit(12)
-				->execute()
-				->as_array();
+			->from(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS pc_count from counters where device = 'PC' AND created_at >= ".$date." group by `date` order by created_at desc) AS t1"))
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `idate`,count(distinct(ip)) AS ios_count from counters where device = 'iOS' group by `idate`) AS t2"),"LEFT")
+			->on("t1.date","=","t2.idate")
+			->join(DB::expr("(select DATE_FORMAT(from_unixtime(created_at),'%Y-%m-%d') AS `adate`,count(distinct(ip)) AS android_count from counters where device = 'Android' group by `adate`) AS t3"),"LEFT")
+			->on("t1.date","=","t3.adate")
+			->limit(12)
+			->execute()
+			->as_array();
 			return $result;
 		}
 	}
