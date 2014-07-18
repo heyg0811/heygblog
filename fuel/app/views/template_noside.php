@@ -91,37 +91,26 @@
 <?php echo $content;?>
 <div class="row">
     <div class="col-md-4">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side1 -->
         <ins class="adsbygoogle"
-        style="display:inline-block;width:300px;height:250px"
+        style="display:inline-block;width:100%height:250px"
         data-ad-client="ca-pub-8972128233832989"
         data-ad-slot="7757587752"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
     <div class="col-md-4">
-     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     <!-- no-side2 -->
-     <ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px"
-     data-ad-client="ca-pub-8972128233832989"
-     data-ad-slot="9234320950"></ins>
-     <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-     </script>
- </div>
- <div class="col-md-4">
+       <!-- no-side2 -->
+       <ins class="adsbygoogle"
+       style="display:inline-block;width:100%height:250px"
+       data-ad-client="ca-pub-8972128233832989"
+       data-ad-slot="9234320950"></ins>
+   </div>
+   <div class="col-md-4">
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- no-side3 -->
     <ins class="adsbygoogle"
-    style="display:inline-block;width:300px;height:250px"
+    style="display:inline-block;width:100%height:250px"
     data-ad-client="ca-pub-8972128233832989"
     data-ad-slot="1711054151"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 </div>
 <footer>
@@ -172,12 +161,15 @@
     </div>
 </div>
 </footer>
-
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
 <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
 <?php echo Asset::js('lightbox/lightbox.min.js');?>
 <?php echo Asset::js('validationengine/validationEngine-ja.js');?>
 <?php echo Asset::js('validationengine/validationEngine.js');?>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php echo Asset::js('original.js');?>
 </body>
 </html>
