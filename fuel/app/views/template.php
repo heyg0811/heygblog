@@ -152,7 +152,7 @@
 <div class="aside-widget">
     <!-- top -->
     <ins class="adsbygoogle"
-     style="margin-left:10px;display:inline-block;width:300px;height:250px"
+     style="margin-left:10px;margin-right:-10pxdisplay:inline-block;width:100%;height:250px"
      data-ad-client="ca-pub-8972128233832989"
      data-ad-slot="8815518551"></ins>
 </div>
