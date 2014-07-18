@@ -133,12 +133,13 @@ $(function(){
                 var html = "";
                 for (var i=0; i<data.length; i++) {
                     if(i%2 == 0){
-                        html += "<article class='comment'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
+                        html += "<article class='comment'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'></div>";
                     }else{
-                        html += "<article class='comment reply'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
+                        html += "<article class='comment reply'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'></div>";
                     }
-                    html += "<div class='meta'><h3><a href='/blog?id="+data[i].article_id+">"+data[i].title+"</a></h3><span class='date'>"+data[i].date+"</span></div></header><div class='body'>"+data[i].digest+"</div></article>";
+                    html += "<div class='meta'><h3><a href='/blog?id="+data[i].article_id+"'>"+data[i].title+"</a></h3><span class='date'>"+data[i].date+"</span></div></header><div class='body'>"+data[i].digest+"</div></article>";
                 };
+                $("#result").children("").remove();
                 $('#result').prepend(html);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
