@@ -1190,14 +1190,14 @@ fieldset[disabled] .btn-heyg-two.active {
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .tag{
-  margin-left:100px;
-  margin-right:100px;
+    margin-left:100px;
+    margin-right:100px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .tag{
-  margin-left:0px;
-  margin-right:0px;
+    margin-left:0px;
+    margin-right:0px;
   }
 }
 
@@ -1221,4 +1221,13 @@ fieldset[disabled] .btn-heyg-two.active {
 
 dd {
   margin-bottom:8px;
+}
+
+.margin-left1{
+  margin-left:10px;
+}
+@media (max-width: 768px) {
+  .margin-left1{
+    margin-left:0px;
+  }
 }
