@@ -90,7 +90,7 @@
 </header>
 <?php echo $content;?>
 <div class="row">
-    <div class="col-md-4 col-xs-11">
+    <div class="col-md-4 col-xs-10">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side1 -->
         <ins class="adsbygoogle"
@@ -101,7 +101,7 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <div class="col-md-4 col-xs-11">
+    <div class="col-md-4 col-xs-10">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side2 -->
         <ins class="adsbygoogle"
@@ -112,7 +112,7 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <div class="col-md-4 col-xs-11">
+    <div class="col-md-4 col-xs-10">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side3 -->
         <ins class="adsbygoogle"
