@@ -1,6 +1,6 @@
 <div class="widewrapper main">
     <div class="container no-side tag">
-        <h1 class="text-center"><?php echo $word;?>を含む記事一覧</h1>
+        <h2 class="text-center"><i class="icon-search"></i> <?php echo $word;?>を含む記事一覧</h2>
         <aside class="comments" id="comments">
     <hr>
 
@@ -8,11 +8,11 @@
         <?php if(($i%2)==0):?>
             <article class='comment'>
                 <header class='clearfix'>
-                    <?php echo Asset::img('user.png',array('class'=>'avatar'));?>
+                    <?php echo Asset::img("blog/".$article[$i]["img"]."_small.gif",array('class'=>'avatar'));?>
         <?php else:?>
             <article class='comment reply'>
                 <header class='clearfix'>
-                    <?php echo Asset::img('admin.jpeg',array('class'=>'avatar'));?>
+                    <?php echo Asset::img("blog/".$article[$i]["img"]."_small.gif",array('class'=>'avatar'));?>
         <?php endif;?>
             <div class='meta'>
                 <h3><a href=<?php echo "/blog?id=".$article[$i]["article_id"];?>><?php echo $article[$i]["title"];?></a></h3>

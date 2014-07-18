@@ -120,6 +120,30 @@ $(function(){
             }
         });
     });
+
+    $('#apply').click(function(){
+        var val = $('[name=category]').val();
+        $.ajax({
+            type: "POST",
+            url: "/ajax/category",
+            dataType:"json",
+            data: {"category": val},
+            success: function(data, dataType){
+                var target = $("#result");
+                var html = "";
+                for (var i=0; i<data.length; i++) {
+                    if(i%2 == 0){
+                        html += "<article class='comment'><header class='clearfix'><img class='avater' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
+                    }else{
+                        html += "<article class='comment reply'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
+                    }
+                    html += "<div class='meta'><h3><a href='/blog?id="+data[i].article_id+">"+data[i].title+"</a></h3><span class='date'>"+data[i].date+"</span></div></header><div class='body'>"+data[i].digest+"</div></article>";
+                };
+                $('#result').prepend(html);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+            }
+        });
 });
 
 $(function(){
@@ -135,6 +159,7 @@ $(function(){
 
 $(window).load(function(){
     jQuery("form").validationEngine();
+});
 });
 
 

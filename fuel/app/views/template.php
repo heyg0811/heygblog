@@ -55,7 +55,15 @@
                         <div class="collapse navbar-collapse">
                             <ul class="nav nav-pills navbar-nav">
                                 <li class=<?php echo $title == "とっぷ"?"active":"";?>><a href="/">とっぷ</a></li>
-                                <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog/">ぶろぐ</a></li>
+                                <li class=<?php echo $title == "ぶろぐ"||$title=="じゃんる"?"active dropdown":"dropdown";?>>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="/">
+                                        ぶろぐ<b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/blog/">最新記事</a></li>
+                                        <li><a href="/util/category">かてごり検索</a></li>
+                                    </ul>
+                                </li>
                                 <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts/">てぃーえす</a></li>
                                 <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance/">がいだんす</a></li>
                                 <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about/">あばうと</a></li>
@@ -101,6 +109,7 @@
                     </header>
                     <div class="body">
                         <ul class="heyg-list">
+                            <li><a href="/util/category">カテゴリ検索追加しました。</a></li>
                             <li><a href="/blog?id=1">ついにリリースできました。</a></li>
                         </ul>
                     </div>
@@ -214,19 +223,19 @@
 <?php echo Asset::js('original.js');?>
 <script type="text/javascript">
 SyntaxHighlighter.autoloader(
- <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
- ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
- ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
- ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
- ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
- ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
- ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
- ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
- ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
- ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
- ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
- ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
- );
+   <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
+   ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
+   ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
+   ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
+   ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
+   ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
+   ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
+   ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
+   ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
+   ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
+   ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
+   ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
+   );
 SyntaxHighlighter.all();
 </script>
 

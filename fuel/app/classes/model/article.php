@@ -86,6 +86,15 @@ class Model_Article extends \Orm\Model
 		return $result;
 	}
 
+	public static function searchCategory($category){
+		$result = DB::select(DB::expr("article_id,img,title,DATE_FORMAT(from_unixtime(created_at),'%Y %M %d') AS date,digest"))
+		->from("articles")
+		->where("category","=",$category)
+		->execute()
+		->as_array();
+		return $result;
+	}
+
 	public static function countRow(){
 		$result = DB::select("article_id")
 		->from("articles")

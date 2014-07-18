@@ -30,7 +30,7 @@ class Controller_Util extends Controller_Template
 	public function action_tag(){
 		$this->template->title='たぐ検索';
 		$this->template->content = View::forge('util/tag');
-		$this->template->breadcrumb = array(array("url" => "/util/tag", "name" => "Tag search"));
+		$this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"),array("url" => "/util/tag", "name" => "Tag search"));
 		$result = Model_Article::searchTag(Input::get("tag",null));
 		$this->template->content->article = $result;
 		$this->template->content->tag = Input::get("tag",null);
@@ -39,11 +39,18 @@ class Controller_Util extends Controller_Template
 	public function action_search(){
 		$this->template->title = 'けんさく';
 		$this->template->content = View::forge('util/search');
-		$this->template->breadcrumb = array(array("url" => "/util/search", "name" => "Word search"));
+		$this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"),array("url" => "/util/search", "name" => "Word search"));
 		$result = Model_Article::searchWord(Input::post("sword",null));
 		$this->template->content->word = Input::post("sword",null);
 		$this->template->content->article = $result;
 	}
+
+	public function action_category(){
+		$this->template->title = 'かてごり';
+		$this->template->content = View::forge('util/category');
+		$this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"),array("url" => "","name"=>"Category search"));
+	}
+
 	/**
 	 * The 404 action for the application.
 	 *
