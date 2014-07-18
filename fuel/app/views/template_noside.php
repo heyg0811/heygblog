@@ -90,7 +90,7 @@
     </div>
 </header>
 <?php echo $content;?>
-<div class="row" style="margin-right:-30px;margin-left:-30px;">
+<div class="row" style="margin-right:0px;margin-left:0px;">
         <div class="col-md-4">
             <!-- no-side1 -->
             <ins class="adsbygoogle"
