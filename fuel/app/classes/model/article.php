@@ -127,8 +127,8 @@ class Model_Article extends \Orm\Model
 		$offset = (($page-1) * 4);
 		$result = DB::select()
 		->from("articles")
-		->offset($offset)
 		->limit(4)
+		->offset($offset)
 		->order_by("created_at","desc")
 		->execute()
 		->as_array();
@@ -139,9 +139,9 @@ class Model_Article extends \Orm\Model
 		$offset = ($count - ($page * 4));
 		$result = DB::select()
 		->from("articles")
-		->offset($offset)
 		->limit(4)
-		->order_by("article_id","asc")
+		->offset($offset)
+		->order_by("article_id","desc")
 		->execute()
 		->as_array();
 		return $result;

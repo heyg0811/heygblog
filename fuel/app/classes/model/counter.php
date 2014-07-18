@@ -217,7 +217,7 @@ class Model_Counter extends \Orm\Model
 		->on("counters.article_id", "=", "articles.article_id")
 		->group_by("article_id")
 		->order_by("count","desc")
-		->limit(5)
+		->limit(3)
 		->execute()
 		->as_array();
 		return $result;

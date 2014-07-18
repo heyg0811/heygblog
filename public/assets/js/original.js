@@ -106,7 +106,7 @@ $(function(){
             complete: function(){
                 $('#target').remove();
                 page = page + 1;
-                if(count < page*4)page = 1;
+                if(count < (page-1)*5)page = 1;
                 paging(page);
             }
         });
@@ -116,7 +116,7 @@ $(function(){
             complete: function(){
                 $('#target').remove();
                 page = page - 1;
-                if(page <= 0)page=count/4;
+                if(page <= 0)page=Math.ceil(count/4);
                 paging(page);
             }
         });
