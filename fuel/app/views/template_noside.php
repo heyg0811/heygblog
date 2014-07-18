@@ -30,119 +30,128 @@
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/ie8.css">
         <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
-    <![endif]-->
+        <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-1.9.1.min.js"><\/script>')</script>
 
-</head>
-<body>
-    <header>
-        <div class="widewrapper masthead">
-            <div class="container">
-                <a href="/" id="logo">
-                    <?php echo Asset::img('logo.png',array('class'=>'img-responsive'));?>
-                </a>
-
-                <div id="mobile-nav-toggle" class="pull-right">
-                    <a href="#" data-toggle="collapse" data-target=".heyg-nav .navbar-collapse" class="mobilenav">
-                        <i class="icon-reorder"></i>
+    </head>
+    <body>
+        <header>
+            <div class="widewrapper masthead">
+                <div class="container">
+                    <a href="/" id="logo">
+                        <?php echo Asset::img('logo.png',array('class'=>'img-responsive'));?>
                     </a>
-                </div>
 
-                <nav class="pull-right heyg-nav">
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav nav-pills navbar-nav">
-                            <li class=<?php echo $title == "とっぷ"?"active":"";?>><a href="/">とっぷ</a></li>
-                            <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog/">ぶろぐ</a></li>
-                            <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts/">てぃーえす</a></li>
-                            <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance/">がいだんす</a></li>
-                            <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about/">あばうと</a></li>
-                        </ul>
+                    <div id="mobile-nav-toggle" class="pull-right">
+                        <a href="#" data-toggle="collapse" data-target=".heyg-nav .navbar-collapse" class="mobilenav">
+                            <i class="icon-reorder"></i>
+                        </a>
                     </div>
-                </nav>
 
+                    <nav class="pull-right heyg-nav">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav nav-pills navbar-nav">
+                                <li class=<?php echo $title == "とっぷ"?"active":"";?>><a href="/">とっぷ</a></li>
+                                <li class=<?php echo $title == "ぶろぐ"?"active":"";?>><a href="/blog/">ぶろぐ</a></li>
+                                <li class=<?php echo $title == "てぃーえす"?"active":"";?>><a href="/ts/">てぃーえす</a></li>
+                                <li class=<?php echo $title == "がいだんす"?"active":"";?>><a href="/guidance/">がいだんす</a></li>
+                                <li class=<?php echo $title == "あばうと"?"active":"";?>><a href="/about/">あばうと</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
             </div>
-        </div>
 
-        <div class="widewrapper subheader">
-            <div class="container">
-                <div class="heyg-breadcrumb">
-                    <a href="/">Top</a>
-                    <?php if(!empty($breadcrumb)): ?>
+            <div class="widewrapper subheader">
+                <div class="container">
+                    <div class="heyg-breadcrumb">
+                        <a href="/">Top</a>
+                        <?php if(!empty($breadcrumb)): ?>
                         <?php foreach ($breadcrumb as $val): ?>
-                            <span class="separator">&#x2F;</span>
-                            <a href="<?php echo $val["url"] ?>"><?php echo $val["name"]; ?></a>
-                        <?php endforeach; ?>
-                    <?php endif?>
-                </div>
+                        <span class="separator">&#x2F;</span>
+                        <a href="<?php echo $val["url"] ?>"><?php echo $val["name"]; ?></a>
+                    <?php endforeach; ?>
+                <?php endif?>
+            </div>
 
-                <div class="heyg-searchbox">
-                    <form action="/util/search" method="post" accept-charset="utf-8">
-                        <button class="searchbutton" type="submit">
-                            <i class="icon-search"></i>
-                        </button>
-                        <input class="searchfield" name="sword" id="searchbox" type="text" placeholder="記事検索">
-                    </form>
-                </div>
+            <div class="heyg-searchbox">
+                <form action="/util/search" method="post" accept-charset="utf-8">
+                    <button class="searchbutton" type="submit">
+                        <i class="icon-search"></i>
+                    </button>
+                    <input class="searchfield" name="sword" id="searchbox" type="text" placeholder="記事検索">
+                </form>
             </div>
         </div>
-    </header>
-    <?php echo $content;?>
-    <footer>
-        <div class="widewrapper footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 footer-widget">
-                        <h3> <i class="icon-cog"></i>かうんた</h3>
+    </div>
+</header>
+<?php echo $content;?>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- noaside -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:100%;height:250px"
+data-ad-client="ca-pub-8972128233832989"
+data-ad-slot="5781326953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="icon-cog"></i>かうんた</h3>
 
-                        <span></span>
+                    <span></span>
 
-                        <div class="stats">
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Article::count();?></span>
-                                <span class="caption">きじ</span>
-                            </div>
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Comment::count();?></span>
-                                <span class="caption">こめんと</span>
-                            </div>
-                            <div class="line">
-                                <span class="counter"><?php echo Model_Counter::countAccess();?></span>
-                                <span class="caption">あくせす</span>
-                            </div>
+                    <div class="stats">
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Article::count();?></span>
+                            <span class="caption">きじ</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Comment::count();?></span>
+                            <span class="caption">こめんと</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter"><?php echo Model_Counter::countAccess();?></span>
+                            <span class="caption">あくせす</span>
                         </div>
                     </div>
-
-                    <div class="col-md-4 footer-widget">
-                        <h3> <i class="icon-star"></i>にんきじじ</h3>
-                        <ul class="heyg-list">
-                            <?php $popArt = Model_Counter::getPop();?>
-                            <?php foreach($popArt as $val):?>
-                                <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
-                            <?php endforeach;?>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-4 footer-widget">
-                        <h3> <i class="icon-cog"></i>こんたくと</h3>
-
-                        <span></span>
-
-                        <span class="email">
-                            <a href="/about/">heyg.pw@gmail.com</a>
-                        </span>
-                    </div>
                 </div>
+
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="icon-star"></i>にんきじじ</h3>
+                    <ul class="heyg-list">
+                        <?php $popArt = Model_Counter::getPop();?>
+                        <?php foreach($popArt as $val):?>
+                        <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
+                    <?php endforeach;?>
+                </ul>
+            </div>
+
+            <div class="col-md-4 footer-widget">
+                <h3> <i class="icon-cog"></i>こんたくと</h3>
+
+                <span></span>
+
+                <span class="email">
+                    <a href="/about/">heyg.pw@gmail.com</a>
+                </span>
             </div>
         </div>
-    </footer>
+    </div>
+</div>
+</footer>
 
-    <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
-    <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
-    <?php echo Asset::js('lightbox/lightbox.min.js');?>
-    <?php echo Asset::js('validationengine/validationEngine-ja.js');?>
-    <?php echo Asset::js('validationengine/validationEngine.js');?>
-    <?php echo Asset::js('original.js');?>
+<?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
+<?php echo Asset::js('vendor/modernizr/modernizr.js');?>
+<?php echo Asset::js('lightbox/lightbox.min.js');?>
+<?php echo Asset::js('validationengine/validationEngine-ja.js');?>
+<?php echo Asset::js('validationengine/validationEngine.js');?>
+<?php echo Asset::js('original.js');?>
 </body>
 </html>
