@@ -477,7 +477,6 @@ hr {
 .blog-main {
   padding-top: 36px;
   padding-bottom: 20px;
-  min-height:1300px;
 }
 .blog-main:before {
   right: -16px;
@@ -499,14 +498,6 @@ hr {
 @media (max-width: 767px) {
   .blog-aside {
     padding-top: 50px;
-  }
-  .blog-main{
-    min-height:2400px;
-  }
-}
-@media (max-width: 320px){
-  .blog-main{
-    min-height:2655px;
   }
 }
 .blog-aside:before {

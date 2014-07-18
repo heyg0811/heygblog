@@ -150,15 +150,11 @@
 </div>
 </div>
 <div class="aside-widget">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- top -->
     <ins class="adsbygoogle"
-    style="display:inline-block;width:100%;height:280px"
-    data-ad-client="ca-pub-8972128233832989"
-    data-ad-slot="7406164155"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+     style="margin-left:10px;display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-8972128233832989"
+     data-ad-slot="8815518551"></ins>
 </div>
 </aside>
 </div>
@@ -211,7 +207,6 @@
     </div>
 </div>
 </footer>
-
 <?php echo Asset::js('vendor/bootstrap/bootstrap.min.js');?>
 <?php echo Asset::js('vendor/modernizr/modernizr.js');?>
 <?php echo Asset::js('syntaxhighlighter/shCore.js');?>
@@ -220,22 +215,24 @@
 <?php echo Asset::js('syntaxhighlighter/shBrushPhp.js');?>
 <?php echo Asset::js('validationengine/validationEngine-ja.js');?>
 <?php echo Asset::js('validationengine/validationEngine.js');?>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <?php echo Asset::js('original.js');?>
 <script type="text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
 SyntaxHighlighter.autoloader(
-   <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
-   ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
-   ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
-   ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
-   ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
-   ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
-   ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
-   ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
-   ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
-   ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
-   ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
-   ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
-   );
+ <?php echo "'bash ".Uri::base()."assets/js/syntaxhighlighter/shBrushBash.js'";?>
+ ,<?php echo "'diff ".Uri::base()."assets/js/syntaxhighlighter/shBrushDiff.js'";?>
+ ,<?php echo "'css ".Uri::base()."assets/js/syntaxhighlighter/shBrushCss.js'";?>
+ ,<?php echo "'html xml xhtml ".Uri::base()."assets/js/syntaxhighlighter/shBrushXml.js'";?>
+ ,<?php echo "'js jscript javascript ".Uri::base()."assets/js/syntaxhighlighter/shBrushJScript.js'";?>
+ ,<?php echo "'perl pl ".Uri::base()."assets/js/syntaxhighlighter/shBrushPerl.js'";?>
+ ,<?php echo "'plain ".Uri::base()."assets/js/syntaxhighlighter/shBrushPlain.js'";?>
+ ,<?php echo "'python py ".Uri::base()."assets/js/syntaxhighlighter/shBrushPython.js'";?>
+ ,<?php echo "'sql ".Uri::base()."assets/js/syntaxhighlighter/shBrushSql.js'";?>
+ ,<?php echo "'tt tt2 ".Uri::base()."assets/js/syntaxhighlighter/shBrushTT2.js'";?>
+ ,<?php echo "'yaml yml ".Uri::base()."assets/js/syntaxhighlighter/shBrushYAML.js'";?>
+ ,<?php echo "'php ".Uri::base()."assets/js/syntaxhighlighter/shBrushPhp.js'";?>
+ );
 SyntaxHighlighter.all();
 </script>
 
