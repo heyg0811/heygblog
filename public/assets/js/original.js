@@ -92,7 +92,7 @@ function paging(page) {
             html = html + "</div></div>";
             $('#blogMain').prepend(html);
             $('#target').animate({opacity: 1},{duration:1000});
-            $("#blogMain").css("min-height",$("#nowpage").height()+60);
+            $("#blogMain").css("min-height",$("#nowpage").height()+70);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
         }
@@ -161,9 +161,9 @@ $(function(){
 
 $(window).load(function(){
     jQuery("form").validationEngine();
-    $("#blogMain").css("min-height",$("#nowpage").height()+60);
+    $("#blogMain").css("min-height",$("#nowpage").height()+70);
     $(window).resize(function(){
-        $("#blogMain").css("min-height",$("#nowpage").height()+60);
+        $("#blogMain").css("min-height",$("#nowpage").height()+70);
     });
 });
 });
