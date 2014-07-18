@@ -90,33 +90,33 @@
 </header>
 <?php echo $content;?>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-11">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side1 -->
         <ins class="adsbygoogle"
-        style="display:inline-block;width:80%;height:250px"
+        style="display:inline-block;width:50%;height:250px"
         data-ad-client="ca-pub-8972128233832989"
         data-ad-slot="7757587752"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-11">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side2 -->
         <ins class="adsbygoogle"
-        style="display:inline-block;width:80%;height:250px"
+        style="display:inline-block;width:50%;height:250px"
         data-ad-client="ca-pub-8972128233832989"
         data-ad-slot="9234320950"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-xs-11">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- no-side3 -->
         <ins class="adsbygoogle"
-        style="display:inline-block;width:80%;height:250px"
+        style="display:inline-block;width:50%;height:250px"
         data-ad-client="ca-pub-8972128233832989"
         data-ad-slot="1711054151"></ins>
         <script>
