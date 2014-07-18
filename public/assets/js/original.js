@@ -133,7 +133,7 @@ $(function(){
                 var html = "";
                 for (var i=0; i<data.length; i++) {
                     if(i%2 == 0){
-                        html += "<article class='comment'><header class='clearfix'><img class='avater' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
+                        html += "<article class='comment'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
                     }else{
                         html += "<article class='comment reply'><header class='clearfix'><img class='avatar' src='http://heyg.pw/assets/img/blog/"+data[i].img+"_small.gif'>";
                     }
