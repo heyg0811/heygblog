@@ -88,19 +88,19 @@
 	<div class="row">
 		<div class="col-md-6">
 			<input type="text" name="name" id="comment-name"
-			placeholder="なまえ" class="form-control input-lg validate[required]">
+			placeholder="なまえ(必須)" class="form-control input-lg validate[required]">
 		</div>
 		<div class="col-md-6">
 			<input type="email" name="email" id="comment-email"
-			placeholder="めーる" class="form-control input-lg validate[custom[email]]">
+			placeholder="めーる(書かなくてOK)" class="form-control input-lg validate[custom[email]]">
 		</div>
 	</div>
 
 	<input type="url" name="url" id="comment-url"
-	placeholder="うぇぶさいと" class="form-control input-lg validate[custom[url]]">
+	placeholder="うぇぶさいと(書かなくてOK)" class="form-control input-lg validate[custom[url]]">
 
 	<textarea rows="10" name="body" id="comment-body"
-	placeholder="なにか書いてね" class="form-control input-lg validate[required]"></textarea>
+	placeholder="なにか書いてね(必須)" class="form-control input-lg validate[required]"></textarea>
 	<div class="buttons clearfix">
 		<button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
 	</div>
