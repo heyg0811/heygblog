@@ -34,8 +34,12 @@ class Controller_Blog extends Controller_Template
         $id = Input::get("id",null);
         if(!empty($id)){
             $article = Model_Article::getId($id);
-            $comment = Model_Comment::getArtId($id);
-            Model_Counter::insertAddress("blog",$id);
+            if(empty($article)){
+                return Response::redirect("/util/404");
+            }else{
+                $comment = Model_Comment::getArtId($id);
+                Model_Counter::insertAddress("blog",$id);
+            }
         }else{
             $article = Model_Article::getAll(1);
             $comment = Model_Comment::getArtId($article[0]["article_id"]);
