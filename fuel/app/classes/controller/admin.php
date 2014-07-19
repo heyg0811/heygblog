@@ -30,10 +30,13 @@ class Controller_Admin extends Controller_Template
 		$method = Uri::segment(2);
 		// ログインチェック
 		$auth_methods = array(
+			'',
 			'logout',
 			'index',
 			'addarticle',
+			'addimage',
 			'imgupload',
+			'addedarticle',
 			);
 		if (in_array($method, $auth_methods) && !Auth::check()) {
 			Response::redirect('admin/login');
