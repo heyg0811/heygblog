@@ -103,17 +103,6 @@
         <div class="row">
             <?php echo $content;?>
             <aside class="col-md-4 blog-aside">
-                <div class="aside-widget">
-                    <header>
-                        <h3>おしらせ</h3>
-                    </header>
-                    <div class="body">
-                        <ul class="heyg-list">
-                            <li><a href="/util/category">カテゴリ検索追加しました。</a></li>
-                            <li><a href="/blog?id=1">ついにリリースできました。</a></li>
-                        </ul>
-                    </div>
-                </div>
 
                 <div class="aside-widget">
                     <header>
