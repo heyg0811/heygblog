@@ -73,7 +73,7 @@
 				</span>
 			</div>
 		</header>
-		<div class='body'><?php echo $val["body"]?></div>
+		<div class='body'><?php echo nl2br($body);?></div>
 	</article>
 <?php endforeach;?>
 </aside>
