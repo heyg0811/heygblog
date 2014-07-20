@@ -28,7 +28,6 @@ class Controller_Blog extends Controller_Template
 	 * @return  Response
 	 */
 	public function action_index(){
-        $this->template->title = 'ぶろぐ';
         $this->template->content = View::forge('blog/index');
         $this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"));
         $id = Input::get("id",null);
@@ -47,6 +46,7 @@ class Controller_Blog extends Controller_Template
         }
         $this->template->content->article = $article;
         $this->template->content->comment = $comment;
+        $this->template->title = $article[0]["title"];
     }
 
     public function action_confirm(){

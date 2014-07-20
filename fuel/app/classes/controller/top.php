@@ -30,7 +30,7 @@ class Controller_Top extends Controller_Template
 	 */
 	public function action_index()
 	{
-		$this->template->title = 'とっぷ';
+		$this->template->title = 'HeyG Blog';
 		$this->template->content = View::forge('top/index');
 		$this->template->content->count = Model_Article::countRow();
 		$this->template->content->article = Model_Article::getPage(1);
