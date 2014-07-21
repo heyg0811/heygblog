@@ -98,9 +98,25 @@ function paging(page) {
         }
     });
 }
+
+function likebad(type){
+    $.ajax({
+        type: "POST",
+        url: "/ajax/likebad",
+        dataType:"json",
+        data: {"type": type},
+        success: function(data, dataType){
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+        }
+    });
+}
+
 $(function(){
     var page = 1;
     var count = artCount();
+    var likeflag = false;
+    var badflag = false;
     $('#newer').click(function(){
         $('#target').animate({opacity: 0},{duration:1000,
             complete: function(){
@@ -147,6 +163,25 @@ $(function(){
             }
         });
 });
+$('#likebt').click(function(){
+    if(likeflag == false){
+        $('#liketxt').html("取消");
+        likeflag = true;
+    }else{
+        $('#liketxt').html("Like");
+        likeflag = false;
+    }
+});
+$('#badbt').click(function(){
+    if(badflag == false){
+        $('#badtxt').html("取消");
+        badflag = true;
+    }else{
+        $('#badtxt').html("Bad");
+        badflag = false;
+    }
+});
+
 
 $(function(){
     $('a[href^=#]').not('.tab').not('.mobilenav').click(function(){

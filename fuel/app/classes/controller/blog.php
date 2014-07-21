@@ -21,7 +21,19 @@
  */
 class Controller_Blog extends Controller_Template
 {
-
+    public function before()
+    {
+        parent::before();
+        // 初期処理
+        $method = Uri::segment(2);
+        // no_sideチェック
+        $auth_methods = array(
+            'confirm'
+            );
+        if(in_array($method, $auth_methods)){
+            $this->template = \View::forge("template_noside");
+        }
+    }
 	/**
 	 *
 	 * @access  public
@@ -50,18 +62,18 @@ class Controller_Blog extends Controller_Template
     }
 
     public function action_confirm(){
-        $this->template->title = 'かくにん';
+        $this->template->title = "かくにん";
         $this->template->content = View::forge('blog/confirm');
         $this->template->breadcrumb = array(array("url" => "/blog/", "name" => "Blog"),array("url"=>"/blog/","name" => "Confirm"));
     }
 
     public function action_confirmed(){
         Model_Comment::insert(
-                Input::post("id",null),
-                Input::post("name",null),
-                Input::post("email",null),
-                Input::post("url",null),
-                Input::post("body",null));
+            Input::post("id",null),
+            Input::post("name",null),
+            Input::post("email",null),
+            Input::post("url",null),
+            Input::post("body",null));
         Model_User::insertUser($_SERVER["REMOTE_ADDR"],Input::post("name",null));
         return Response::redirect('blog/index');
     }

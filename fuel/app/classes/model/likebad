@@ -1,0 +1,46 @@
+<?php
+
+class Model_Likebad extends \Orm\Model
+{
+	protected static $_properties = array(
+		'id',
+		'ip',
+		'type',
+		);
+
+	protected static $_table_name = 'likebad';
+
+	public static function getAll(){
+		$result = DB::select("*")
+		->from("likebad")
+		->execute()
+		->as_array();
+		return $result;
+	}
+
+	public static function addIP($ip,$type){
+		$table = "likebad";
+		$columns = array("ip","type");
+		$values = array(
+			"ip" => $ip,
+			"type" => $type,
+			);
+		DB::insert($table)
+		->columns($columns)
+		->values($values)
+		->execute();
+	}
+
+	public static function rmIP(){
+		$table = "likebad";
+		$columns = array("ip","type");
+		$values = array(
+			"ip" => $ip,
+			"type" => $type,
+			);
+		DB::insert($table)
+		->columns($columns)
+		->values($values)
+		->execute();
+	}
+}

@@ -8,12 +8,9 @@
 
                 <form action="confirmed" method="post" accept-charset="utf-8">
                     <div class="row">
-                        <input type="hidden" name="name" value=<?php echo Input::post("name",null);?>>
-                        <input disabled type="text" name="name" placeholder="No name" class="form-control input-lg" value=<?php echo Input::post("body",null);?>>
-                        <input type="hidden" name="email" value=<?php echo Input::post("email",null);?>>
-                        <input disabled type="email" name="email" placeholder="No mailaddress" class="form-control input-lg" value=<?php echo Input::post("email",null);?>>
-                        <input type="hidden" name="body" value=<?php echo Input::post("body",null);?>>
-                        <textarea disabled rows="10" name="body" placeholder="No body" class="form-control input-lg"><?php echo Input::post("body",null);?></textarea>
+                        <input readonly type="text" name="name" placeholder="No name" class="form-control input-lg" value=<?php echo Input::post("body",null);?>>
+                        <input readonly type="email" name="email" placeholder="No mailaddress" class="form-control input-lg" value=<?php echo Input::post("email",null);?>>
+                        <textarea readonly rows="10" name="body" placeholder="No body" class="form-control input-lg"><?php echo Input::post("body",null);?></textarea>
 
                         <div class="buttons clearfix">
                             <button type="submit" class="btn btn-xlarge btn-heyg-one">おっけ</button>

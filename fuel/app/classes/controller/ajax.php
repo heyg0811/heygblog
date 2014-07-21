@@ -44,17 +44,27 @@ class Controller_Ajax extends Controller_Rest
 	 * @access  public
 	 * @return  No return
 	 */
-	public function post_backpaging(){
-		$result = Model_Article::getBackPage(Model_Article::count(),$_POST['page']);
-		foreach($result as &$val){
-			$val['created_at'] = date("Y年 m月 d日",$val["created_at"]);
-			$val['body'] = mb_substr($val['body'],0,115,"utf-8");
-		}
+	public function post_addlikebad(){
+		Model_Likebad::addIP(ip2long($_SERVER["REMOTE_ADDR"]),Input::post("type",null));
 		//JSON形式で出力する
 		header('Content-Type: application/json');
 		echo json_encode($result);
 		exit;
 	}
+
+	/**
+	 *
+	 * @access  public
+	 * @return  No return
+	 */
+	public function post_rmlikebad(){
+		Model_Likebad::addIP(ip2long($_SERVER["REMOTE_ADDR"]));
+		//JSON形式で出力する
+		header('Content-Type: application/json');
+		echo json_encode($result);
+		exit;
+	}
+
 
 	/**
 	 *

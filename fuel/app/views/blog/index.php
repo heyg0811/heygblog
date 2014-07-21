@@ -4,7 +4,7 @@
 		<input type="hidden" name="id" value=<?php echo $val["article_id"];?>>
 		<article class="blog-post">
 			<header>
-				<h1><?php echo $val["title"]?></h1>
+				<h1 style="float:left"><?php echo $val["title"]?></h1>
 				<div class="lead-image">
 					<?php echo Asset::img('blog/'.$val["img"].".gif",array('class'=>'img-responsive'));?>
 					<div class="meta clearfix">
@@ -25,27 +25,35 @@
 		</header>
 		<div class="body">
 			<?php if(strpos($val["body"],"@") == false):?>
-				<?php echo nl2br($val["body"]);?>
-			<?php else:?>
-				<?php $temp = explode("@",$val["body"]);?>
-				<?php for($i=0;$i<count($temp);$i++):?>
-					<?php if($i % 2 == 0):?>
-						<?php echo nl2br($temp[$i]);?>
-					<?php else:?>
-						<?php echo htmlspecialchars_decode($temp[$i]);?>
-					<?php endif;?>
-				<?php endfor;?>
-			<?php endif;?>
-		</div>
-	</article>
-
-	<aside class="social-icons clearfix">
-		<a href=<?php echo "http://twitter.com/intent/tweet?text=".Uri::base()."blog?id=".$val["article_id"];?> class="social-icon color-one" onClick="window.open(encodeURI(decodeURI(this.href)),'tweetwindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'); return false;">
-			<div class="inner-circle"></div> <i class="icon-twitter"></i>
-		</a> <a href="" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),null,'width=550px,height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');" class="social-icon color-two">
-		<div class="inner-circle"></div> <i class="icon-google-plus"></i>
-	</a>
-	<a href="" onclick=<?php echo "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]."')+'&t='+encodeURIComponent('".$val["title"]."'),null,'width=550px,height=350px');return false;"?> class="social-icon color-three">
+			<?php echo nl2br($val["body"]);?>
+		<?php else:?>
+		<?php $temp = explode("@",$val["body"]);?>
+		<?php for($i=0;$i<count($temp);$i++):?>
+		<?php if($i % 2 == 0):?>
+		<?php echo nl2br($temp[$i]);?>
+	<?php else:?>
+	<?php echo htmlspecialchars_decode($temp[$i]);?>
+<?php endif;?>
+<?php endfor;?>
+<?php endif;?>
+</div>
+<!-- <div class="pull-right" style="">
+	<button type="button" class="btn btn-heyg-one btn-lg" id="likebt">
+		<span class="glyphicon glyphicon-thumbs-up"></span> <span id="liketxt">Like</span> <span class="badge" id="likenum">42</span>
+	</button>
+	<button type="button" class="btn btn-heyg-two btn-lg" id="badbt">
+		<span class="glyphicon glyphicon-thumbs-down"></span> <span id="badtxt">Bad</span> <span class="badge" id="badnum">42</span>
+	</button>
+</div> -->
+</article>
+<hr>
+<aside class="social-icons clearfix" style="padding-top:65px">
+	<a href=<?php echo "http://twitter.com/intent/tweet?text=".Uri::base()."blog?id=".$val["article_id"];?> class="social-icon color-one" onClick="window.open(encodeURI(decodeURI(this.href)),'tweetwindow','width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'); return false;">
+		<div class="inner-circle"></div> <i class="icon-twitter"></i>
+	</a> <a href="" onclick="window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),null,'width=550px,height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!');" class="social-icon color-two">
+	<div class="inner-circle"></div> <i class="icon-google-plus"></i>
+</a>
+<a href="" onclick=<?php echo "window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]."')+'&t='+encodeURIComponent('".$val["title"]."'),null,'width=550px,height=350px');return false;"?> class="social-icon color-three">
 	<div class="inner-circle"></div> <i class="icon-facebook"></i>
 </a>
 </aside>
