@@ -98,6 +98,7 @@
     </div>
 </header>
 <?php echo $content;?>
+<?php if($flag != false):?>
 <div class="row" style="margin-right:0px;margin-left:0px;">
     <div class="col-md-4">
         <!-- no-side1 -->
@@ -130,6 +131,7 @@
         </script>
     </div>
 </div>
+<?php endif;?>
 <footer>
     <div class="widewrapper footer">
         <div class="container">
