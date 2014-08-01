@@ -98,7 +98,7 @@
     </div>
 </header>
 <?php echo $content;?>
-<?php if($flag != false):?>
+<?php if(!empty($flag) && $flag != false):?>
 <div class="row" style="margin-right:0px;margin-left:0px;">
     <div class="col-md-4">
         <!-- no-side1 -->
