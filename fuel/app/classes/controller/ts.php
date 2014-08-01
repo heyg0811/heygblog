@@ -32,7 +32,6 @@ class Controller_Ts extends Controller_Template
         $this->template->title = 'てぃーえす';
         $this->template->content = View::forge('ts/index');
         $this->template->breadcrumb = array(array("url" => "/ts/", "name" => "TS"));
-        $this->template->flag = false;
 	}
 
 	/**
