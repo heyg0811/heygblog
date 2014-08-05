@@ -58,7 +58,7 @@ class Model_Article extends \Orm\Model
 	}
 
 	public static function getTag(){
-		$result = DB::select("article_id","tag")
+		$result = DB::select(DB::expr("distinct(tag) AS tag"))
 		->from("articles")
 		->where("tag","!=",NULL)
 		->execute()
