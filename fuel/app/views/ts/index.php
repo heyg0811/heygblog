@@ -1,8 +1,9 @@
 <div class="widewrapper main">
     <div class="container about">
         <h1>
-            現在サーバーは[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]<br>
-            <span style="font-size:0.7em">申請は<a href="#contact">下記フォーム</a>より</span>
+            現在サーバーは[<span style="text-decoration:underline; color:#69bc87;">稼働中</span>]<br><br>
+            <span style="font-size:0.7em">接続情報は<span style="text-decoration:underline;">申請後</span>に案内します。</span><br>
+            <span style="font-size:0.7em">申請は<a href="#contact" class="text-success">下記フォーム</a>より</span>
         </h1>
         <hr>
         <span class="about-small">

@@ -21,7 +21,7 @@
  */
 class Controller_Ts extends Controller_Template
 {
-	public $template = 'template_noside';
+	public $template = 'template_tsside';
 	/**
 	 *
 	 * @access  public
