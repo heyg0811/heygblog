@@ -29,7 +29,7 @@
                 <form action="/ts/confirm" method="post" accept-charset="utf-8" class="contact-form">
                     <input type="text" name="name" id="contact-name" placeholder="なまえ" class="form-control input-lg validate[required]">
                     <input type="email" name="email" id="contact-email" placeholder="めーる" class="form-control input-lg validate[required,custom[email]">
-                    <textarea rows="10" name="body" id="contact-body" placeholder="申請の場合はチャンネル名・パスワード・ユーザー名・使用目的を御記入ください。" class="form-control input-lg validate[required]"></textarea>
+                    <textarea rows="10" name="body" id="contact-body" placeholder="申請の場合はチャンネル名・パスワード・ユーザー名・推定人数・使用目的(ゲーム名等)を御記入ください。" class="form-control input-lg validate[required]"></textarea>
                     <div class="buttons clearfix">
                         <button type="submit" class="btn btn-xlarge btn-heyg-one">そうしん</button>
                     </div>
