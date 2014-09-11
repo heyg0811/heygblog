@@ -32,5 +32,6 @@ class Controller_Guidance extends Controller_Template
         $this->template->title = 'がいだんす';
         $this->template->content = View::forge('guidance/index');
         $this->template->breadcrumb = array(array("url" => "/guidance/", "name" => "Guidance"));
+        Model_Counter::insertAddress();
 	}
 }

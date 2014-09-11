@@ -2,7 +2,7 @@ $(window).load(function(){
   var graph_data = [];
   var area_data = [];
   // Easy pie charts
-  $('.chart').easyPieChart({animate: 1000});
+  // $('.chart').easyPieChart({animate: 1000});
 
   // $.ajax({
   //   type: "POST",

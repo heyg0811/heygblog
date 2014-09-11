@@ -126,7 +126,7 @@
                 <div class="col-md-4 footer-widget">
                     <h3> <i class="icon-star"></i>にんきじじ</h3>
                     <ul class="heyg-list">
-                        <?php $popArt = Model_Counter::getPop();?>
+                        <?php $popArt = Model_Blogcounter::getPop();?>
                         <?php foreach($popArt as $val):?>
                         <li><a href=<?php echo "/blog?id=".$val["article_id"];?>><?php echo $val["title"];?></a></li>
                     <?php endforeach;?>

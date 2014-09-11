@@ -8,7 +8,6 @@
   <!-- Bootstrap styles -->
   <?php echo Asset::css('admintheme/bootstrap.min.css');?>
   <?php echo Asset::css('admintheme/bootstrap-responsive.min.css');?>
-  <?php echo Asset::css('admintheme/jquery.easy-pie-chart.css');?>
   <?php echo Asset::css('admintheme/styles.css');?>
   <?php echo Asset::css('admintheme/morris.css') ?>
   <?php echo Asset::js('vendor/modernizr/modernizr.js');?>

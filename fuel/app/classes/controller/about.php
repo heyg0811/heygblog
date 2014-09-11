@@ -31,7 +31,7 @@ class Controller_About extends Controller_Template
 	{
 		$this->template->title = 'あばうと';
 		$this->template->content = View::forge('about/index');
-		Model_Counter::insertAddress("about");
+		Model_Counter::insertAddress();
 		$this->template->breadcrumb = array(array("url" => "/about/", "name" => "About"));
 	}
 

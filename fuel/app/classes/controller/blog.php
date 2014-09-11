@@ -49,12 +49,14 @@ class Controller_Blog extends Controller_Template
                 return Response::redirect("/util/404");
             }else{
                 $comment = Model_Comment::getArtId($id);
-                Model_Counter::insertAddress("blog",$id);
+                Model_Blogcounter::insertAddress($id);
+                Model_Counter::insertAddress();
             }
         }else{
             $article = Model_Article::getAll(1);
             $comment = Model_Comment::getArtId($article[0]["article_id"]);
-            Model_Counter::insertAddress("blog");
+            Model_Blogcounter::insertAddress($article[0]["article_id"]);
+            Model_Counter::insertAddress();
         }
         $this->template->content->article = $article;
         $this->template->content->comment = $comment;
