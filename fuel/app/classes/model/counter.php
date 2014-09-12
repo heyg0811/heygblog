@@ -21,6 +21,37 @@ class Model_Counter extends \Orm\Model
 		);
 	protected static $_table_name = 'counters';
 
+	public static function distinctDelete(){
+		$result = DB::select()
+		->from("counters")
+		->execute()
+		->as_array();
+		$ips = array();
+		$dates = array();
+		$ids = array();
+		foreach($result as $row){
+			array_push($ips,$row["ip"]);
+			array_push($dates,date("ymd",$row["created_at"]));
+		}
+		for($i=0;$i<count($result);$i++){
+			$key = array_search($result[$i]["ip"],$ips);
+			if($key !== false && date("ymd",$result[$i]["created_at"]) == $dates[$key]){
+				$temp_ips = $ips;
+				unset($temp_ips[$key]);
+				$key = array_search($result[$i]["ip"],$temp_ips);
+				if($key !== false && date("ymd",$result[$i]["created_at"]) == $dates[$key]){
+					array_push($ids,$result[$i]["id"]);
+					unset($ips[$key]);
+					unset($dates[$key]);
+				}
+			}
+		}
+		foreach($ids as $id){
+			DB::delete("counters")
+			->where("id","=",$id)
+			->execute();
+		}
+	}
 	public static function checkAddress(){
 		$result = DB::select("created_at")
 		->from("counters")

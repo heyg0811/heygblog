@@ -97,7 +97,7 @@ class Controller_Ajax extends Controller_Rest
 	 * @return  JSON
 	 */
 	public function post_getarea(){
-
+		Model_Counter::distinctDelete();
 		//JSON形式で出力する
 		header('Content-Type: application/json');
 		echo json_encode(Model_Counter::countArea(Input::post("dataFilter",null)));
