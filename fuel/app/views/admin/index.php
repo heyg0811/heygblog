@@ -101,7 +101,7 @@
                 <tr>
                   <th>Date</th>
                   <th>IP</th>
-                  <th>Username</th>
+                  <th>Name</th>
                 </tr>
               </thead>
               <tbody>
@@ -133,18 +133,16 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>name</th>
-                <th>email</th>
-                <th>website</th>
-                <th>body</th>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Body</th>
               </tr>
             </thead>
             <tbody>
               <?php foreach($comment as $val):?>
               <tr>
+                <td><?php echo date("Y-m-d H:i:s",$val["created_at"]);?></td>
                 <td><?php echo $val["name"];?></td>
-                <td><?php echo $val["mail"];?></td>
-                <td><?php echo $val["site"];?></td>
                 <td><?php echo $val["body"];?></td>
               </tr>
             <?php endforeach;?>
@@ -169,10 +167,10 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>name</th>
-              <th>mail</th>
-              <th>body</th>
-              <th>date</th>
+              <th>Name</th>
+              <th>Mail</th>
+              <th>Body</th>
+              <th>Date</th>
             </tr>
           </thead>
           <tbody>
@@ -203,10 +201,10 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>name</th>
-            <th>mail</th>
-            <th>body</th>
-            <th>date</th>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Body</th>
+            <th>Date</th>
           </tr>
         </thead>
         <tbody>
