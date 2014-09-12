@@ -24,20 +24,19 @@ class Model_Blogcounter extends \Orm\Model
 	protected static $_table_name = 'blogcounter';
 
 	public static function checkAddress($article_id){
-		$result = DB::select("id")
+		$result = DB::select("created_at")
 		->from("blogcounter")
 		->where("ip","=",$_SERVER["REMOTE_ADDR"])
 		->and_where("article_id","=",$article_id)
 		->execute()
 		->as_array();
-		if(count($result)){
+		if(!empty($result)){
 			if(date("ymd",$result[0]["created_at"]) == date("ymd",time())){
 				return false;
 			}
 			return true;
-		}else{
-			return true;
 		}
+		return true;
 	}
 
 	public static function insertAddress($article_id){
