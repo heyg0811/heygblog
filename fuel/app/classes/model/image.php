@@ -20,9 +20,11 @@ class Model_Image extends \Orm\Model
 		);
 	protected static $_table_name = 'images';
 
-	public static function getAll(){
+	public static function getAll($limit=12){
 		$result = DB::select("*")
 		->from("images")
+		->limit($limit)
+		->order_by("id","desc")
 		->execute()
 		->as_array();
 		return $result;

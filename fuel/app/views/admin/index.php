@@ -86,7 +86,7 @@
     </div>
 
     <div class="row-fluid">
-      <div class="span6">
+      <div class="span12">
         <!-- block -->
         <div class="block">
           <div class="navbar navbar-inner block-header">
@@ -99,13 +99,15 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>GIP</th>
+                  <th>Date</th>
+                  <th>IP</th>
                   <th>Username</th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach($access as $val):?>
                 <tr>
+                  <td><?php echo $val["date"]; ?></td>
                   <td><?php echo $val["ip"];?></td>
                   <td><?php echo $val["name"];?></td>
                 </tr>
@@ -116,13 +118,15 @@
       </div>
       <!-- /block -->
     </div>
-    <div class="span6">
+  </div>
+  <div class="row-fluid">
+    <div class="span12">
       <!-- block -->
       <div class="block">
         <div class="navbar navbar-inner block-header">
           <div class="muted pull-left">コメント</div>
-          <div class="pull-right"><span class="badge badge-info"><?php echo $count["comment"];?></span>
-
+          <div class="pull-right">
+            <span class="badge badge-info"><?php echo $count["comment"];?></span>
           </div>
         </div>
         <div class="block-content collapse in">

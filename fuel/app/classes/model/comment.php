@@ -36,10 +36,12 @@ class Model_Comment extends \Orm\Model
 		return $result;
 	}
 
-	public static function getCom(){
+	public static function getCom($limit=5){
 		$result = DB::select("*")
 					->from("comments")
 					->where("admin","=","0")
+					->order_by("created_at","desc")
+					->limit($limit)
 					->execute()
 					->as_array();
 		return $result;

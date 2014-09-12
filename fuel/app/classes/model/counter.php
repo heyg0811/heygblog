@@ -94,7 +94,7 @@ class Model_Counter extends \Orm\Model
 	}
 
 	public static function countAccess(){
-		$result = DB::select(DB::expr("distinct(ip) AS ip,DATE_FORMAT(from_unixtime(created_at),'%Y%m%d') AS date"))
+		$result = DB::select(DB::expr("ip,DATE_FORMAT(from_unixtime(created_at),'%Y%m%d') AS date"))
 		->from("counters")
 		->execute()
 		->as_array();
@@ -102,7 +102,7 @@ class Model_Counter extends \Orm\Model
 	}
 
 	public static function getAccess(){
-		$result = DB::select(DB::expr("distinct(counters.ip) AS ip,DATE_FORMAT(from_unixtime(counters.created_at),'%Y%m%d') AS date,users.name"))
+		$result = DB::select(DB::expr("counters.ip AS ip,DATE_FORMAT(from_unixtime(counters.created_at),'%Y-%m-%d %H:%i:%s') AS date,users.name AS name"))
 		->from("counters")
 		->join("users","LEFT")
 		->on("counters.ip","=","users.ip")
@@ -110,47 +110,6 @@ class Model_Counter extends \Orm\Model
 		->execute()
 		->as_array();
 		return $result;
-	}
-
-	public static function countGraph($dateFilter){
-		switch($dateFilter){
-			case "w":
-			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS `count`,created_at"))
-			->from("counters")
-			->group_by("date")
-			->order_by("created_at","desc")
-			->limit(7)
-			->execute()
-			->as_array();
-			return $result;
-			case "m":
-			$temp = time();
-			$y = date("Y",$temp); $m = date("m",$temp);
-			$date = mktime(0, 0, 0, $m, 1, $y);
-			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS `count`,created_at"))
-			->from("counters")
-			->where("created_at",">=",$date)
-			->group_by("date")
-			->order_by("created_at","desc")
-			->limit(31)
-			->execute()
-			->as_array();
-			return $result;
-			case "y":
-			$temp = time();
-			$y = date("Y",$temp);
-			$date = mktime(0, 0, 0, 1, 1, $y);
-			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m') AS `date`,count(distinct(ip)) AS `count`,created_at"))
-			->from("counters")
-			->where("created_at",">=",$date)
-			->group_by("date")
-			->order_by("created_at","desc")
-			->limit(12)
-			->execute()
-			->as_array();
-			return $result;
-
-		}
 	}
 
 	public static function countArea($dateFilter){
@@ -239,6 +198,47 @@ class Model_Counter extends \Orm\Model
 		}
 
 		return $ua;
+	}
+
+	public static function countGraph($dateFilter){
+		switch($dateFilter){
+			case "w":
+			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS `count`,created_at"))
+			->from("counters")
+			->group_by("date")
+			->order_by("created_at","desc")
+			->limit(7)
+			->execute()
+			->as_array();
+			return $result;
+			case "m":
+			$temp = time();
+			$y = date("Y",$temp); $m = date("m",$temp);
+			$date = mktime(0, 0, 0, $m, 1, $y);
+			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m-%d') AS `date`,count(distinct(ip)) AS `count`,created_at"))
+			->from("counters")
+			->where("created_at",">=",$date)
+			->group_by("date")
+			->order_by("created_at","desc")
+			->limit(31)
+			->execute()
+			->as_array();
+			return $result;
+			case "y":
+			$temp = time();
+			$y = date("Y",$temp);
+			$date = mktime(0, 0, 0, 1, 1, $y);
+			$result = DB::select(DB::expr("DATE_FORMAT(from_unixtime(`created_at`),'%Y-%m') AS `date`,count(distinct(ip)) AS `count`,created_at"))
+			->from("counters")
+			->where("created_at",">=",$date)
+			->group_by("date")
+			->order_by("created_at","desc")
+			->limit(12)
+			->execute()
+			->as_array();
+			return $result;
+
+		}
 	}
 
 }

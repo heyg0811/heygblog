@@ -70,8 +70,6 @@
             <input type="hidden" name=<?php echo \Config::get('security.csrf_token_key'); ?> value=<?php echo \Security::fetch_token(); ?> />
             <div style="margin-left:15px;">
               <fieldset>
-                <label>Name</label>
-                <input type="text" name="name" placeholder="File name">
                 <label>Type</label>
                 <select name="type">
                   <option value="blog">blog</option>

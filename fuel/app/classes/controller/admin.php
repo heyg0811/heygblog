@@ -191,7 +191,6 @@ class Controller_Admin extends Controller_Template
 			$config = array(
 				'path' => DOCROOT.'assets/img/article/',
 				'auto_rename' => true,
-				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('png'),
 				);
 			break;
@@ -201,7 +200,6 @@ class Controller_Admin extends Controller_Template
 			$config = array(
 				'path' => DOCROOT.'assets/img/blog/',
 				'auto_rename' => true,
-				'new_name' => Input::post("name",null),
 				'ext_whitelist' => array('gif'),
 				);
 			break;

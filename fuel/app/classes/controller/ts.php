@@ -53,6 +53,7 @@ class Controller_Ts extends Controller_Template
 	 * @return  Response
 	 */
 	public function action_confirmed(){
+		Model_User::insertUser($_SERVER["REMOTE_ADDR"],Input::post("name",null));
 		$email = \Email::forge('jis');
 		$email->from(Input::post("email",null), Input::post("name",null));
 		$email->to('heyg.pw@gmail.com');
@@ -68,7 +69,6 @@ class Controller_Ts extends Controller_Template
 		catch (\EmailSendingFailedException $e) {
 			$err_msg = '送信に失敗しました。';
 		}
-		Model_User::insertUser($_SERVER["REMOTE_ADDR"],Input::post("name",null));
 		return Response::redirect('ts/');
 	}
 }
